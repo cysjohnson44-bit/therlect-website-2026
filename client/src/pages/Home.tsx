@@ -37,7 +37,7 @@ export default function Home() {
             </h1>
             
             <p className="text-lg text-muted-foreground max-w-xl leading-relaxed border-l-2 border-primary/30 pl-6">
-              Therlect 泛海科技，憑藉超過十五年的熱管理專業經驗，致力於為全球客戶提供從理論分析到市場應用的全方位解決方案。
+              Therlect 汎海科技，憑藉超過十五年的熱管理專業經驗，致力於為全球客戶提供從理論分析到市場應用的全方位解決方案。
             </p>
             
             <div className="flex flex-wrap gap-4 pt-4">
