@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import AIPromotionWidget from "@/components/AIPromotionWidget";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Cpu, Thermometer, Zap, Activity, Layers, Globe, Calendar, MessageSquare } from "lucide-react";
 import { Link } from "wouter";
@@ -29,6 +30,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden selection:bg-primary/30 selection:text-primary-foreground">
       <Navbar />
+      <AIPromotionWidget />
       
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
