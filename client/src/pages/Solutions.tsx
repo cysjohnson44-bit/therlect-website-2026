@@ -100,7 +100,7 @@ export default function Solutions() {
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="font-display font-bold text-4xl mb-4">多元應用領域</h2>
-            <p className="text-muted-foreground text-lg">我們的技術廣泛應用於各行各業，為不同場景提供定制化解決方案</p>
+            <p className="text-muted-foreground text-lg">我們的技術廣汎應用於各行各業，為不同場景提供定制化解決方案</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
