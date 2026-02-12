@@ -87,7 +87,7 @@ export default function Home() {
               {/* Abstract 3D Element or Product Visualization */}
               <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/20 to-purple-500/20 rounded-full blur-[100px] animate-pulse-slow" />
               <img 
-                src="/assets/thermal_analysis.jpg" 
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663272903053/NGmrNoMgksVRLaeP.jpg" 
                 alt="Thermal Analysis Visualization" 
                 className="relative z-10 w-full h-full object-contain drop-shadow-[0_0_50px_rgba(0,240,255,0.3)] rounded-2xl border border-white/10"
               />
@@ -144,7 +144,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="relative h-64 overflow-hidden">
                 <img 
-                  src="/assets/thermal_module.jpg" 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663272903053/uXPLMlZtuJXslibQ.jpg" 
                   alt="Thermodynamic Engineering" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
@@ -180,7 +180,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="relative h-64 overflow-hidden">
                 <img 
-                  src="/assets/far_infrared_tech.jpg" 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663272903053/mTLZRcKWVrdWClOj.jpg" 
                   alt="Far-Infrared Technology" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
@@ -251,7 +251,7 @@ export default function Home() {
             <div className="w-full md:w-1/2 relative">
               <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
                 <img 
-                  src="/assets/innovation_concept.jpg" 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663272903053/OMNIwysBbeoDdfrz.jpg" 
                   alt="Innovation Process" 
                   className="w-full h-auto"
                 />
@@ -300,7 +300,7 @@ export default function Home() {
       <section className="py-24 relative overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="/assets/partnership_concept.jpg" 
+            src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663272903053/eSjbAICDHCXTVOZs.jpg" 
             alt="Partnership" 
             className="w-full h-full object-cover opacity-20"
           />
