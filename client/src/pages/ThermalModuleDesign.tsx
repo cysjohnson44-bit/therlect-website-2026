@@ -224,14 +224,22 @@ export default function ThermalModuleDesign() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* FOXCONN Logo */}
+            <div className="group relative p-6 rounded-lg border border-primary/20 bg-gradient-to-br from-primary/5 to-transparent hover:border-primary/50 hover:bg-primary/10 transition-all duration-300 flex items-center justify-center min-h-[120px]">
+              <img
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663272903053/rvzHrwSXLQkRaKxO.jpg"
+                alt="FOXCONN"
+                className="max-h-16 max-w-full object-contain"
+              />
+            </div>
+            {/* Other Industries */}
             {[
-              "消費性電子",
               "AI 伺服器",
               "車用電子",
               "工業設備",
             ].map((industry, index) => (
               <div
-                key={index}
+                key={index + 1}
                 className="group relative p-6 rounded-lg border border-primary/20 bg-gradient-to-br from-primary/5 to-transparent hover:border-primary/50 hover:bg-primary/10 transition-all duration-300 text-center"
               >
                 <p className="font-semibold text-foreground group-hover:text-primary transition-colors">{industry}</p>
