@@ -7,6 +7,7 @@ import { useState } from "react";
 
 export default function AluminumModuleDesign() {
   const [expandedModule, setExpandedModule] = useState<number | null>(null);
+  const [expandedOption, setExpandedOption] = useState<number | null>(null);
 
   const advantages = [
     {
@@ -33,6 +34,24 @@ export default function AluminumModuleDesign() {
       description: "根據筆記本電腦的特定規格與散熱需求，提供完全客製化的鋁合金模組設計。",
       icon: Cpu,
     },
+  ];
+
+  const designOptions = [
+    {
+      id: 1,
+      title: "鋁合金模組設計方案",
+      subtitle: "Aluminum Module Design Solution",
+      description: "針對不同的產品需求，設計高效、滿足且結構緊湊的客製化筆記本模組。",
+      details: "我們的鋁合金模組設計方案是針對現代筆記本電腦散熱需求而開發的完整解決方案。從初期的熱分析評估、CAD 設計、FEA 應力分析，到最終的製造工藝指導與品質驗證，我們提供全流程的專業服務。每個設計方案都經過嚴格的 CFD 模擬與實驗驗證，確保在實際應用中達到預期的散熱效能。我們的設計團隊與全球頂級筆記本製造商合作，累積了超過 500+ 個成功案例。無論您需要超薄筆電、高性能遊戲本還是工作站級散熱方案，我們都能提供最優化的鋁合金模組設計。",
+      highlights: [
+        "精密 CAD 設計與 FEA 分析",
+        "業界領先的 CFD 模擬技術",
+        "輕量化與高效能完美平衡",
+        "完全客製化解決方案",
+        "快速原型製作與驗證",
+        "全球製造工藝支援"
+      ]
+    }
   ];
 
   const aluminumModules = [
@@ -100,120 +119,75 @@ export default function AluminumModuleDesign() {
                   鋁合金散熱
                 </span>
               </h1>
-
               <p className="text-lg text-muted-foreground max-w-xl leading-relaxed border-l-2 border-primary/30 pl-6">
-                專為筆記本電腦設計的高效能鋁合金散熱模組。結合精密工程設計與先進製造工藝，為您的產品提供最佳的散熱解決方案。
+                Therlect 汎海科技專注於筆記本電腦的鋁合金模組設計與優化，提供從概念設計到量產的完整解決方案。
               </p>
             </div>
 
             <div className="flex flex-wrap gap-4 pt-4">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-sm px-8 group">
+                立即諮詢
+                <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </Button>
               <Link href="/contact">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-sm px-8 group">
-                  立即諮詢
-                  <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                <Button variant="outline" size="lg" className="border-primary/30 hover:bg-primary/10 hover:text-primary rounded-sm px-8">
+                  預約洽談
                 </Button>
               </Link>
-              <Button variant="outline" size="lg" className="border-primary/30 hover:bg-primary/10 hover:text-primary rounded-sm px-8">
-                了解更多
-              </Button>
             </div>
           </div>
 
           <div className="relative hidden lg:block animate-in zoom-in-95 duration-1000 delay-300 fade-in">
             <div className="relative w-full aspect-square max-w-[600px] mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/20 to-purple-500/20 rounded-full blur-[100px] animate-pulse-slow" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/20 to-purple-500/20 rounded-full blur-[100px] animate-pulse" />
               <img 
-                src="https://private-us-east-1.manuscdn.com/sessionFile/aWh25CCAzOEVEA23UVSeIs/sandbox/x74W8yGhLIm4swOilNjPYT-img-2_1771158980000_na1fn_YWx1bWludW0tbW9kdWxlLWNvbXBhY3Qtc3RydWN0dXJl.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvYVdoMjVDQ0F6T0VWRUEyM1VWU2VJcy9zYW5kYm94L3g3NFc4eUdoTEltNHN3T2lsTmpQWVQtaW1nLTJfMTc3MTE1ODk4MDAwMF9uYTFmbl9ZV3gxYldsdWRXMHRiVzlrZFd4bExXTnZiWEJoWTNRdGMzUnlkV04wZFhKbC5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=Kt-mzCZ38nXS7Be37VbVnO5b7V-6drBTgphyC6-KPwqtaRYdKv5uiSP6o~FLWdje3Ws-WEcDbC5zYSHUYnl~1YTPaPKXs27o04fYThIas5BIM8sONkuOWQJniCbtB6EIzggHPC9F0nmkhL1lomzMawKkt~Icr14q0eTLf46agHjIl9Ql5TOFxo0t1lKZ2h6aogHDZyoMvJbnxx1csBW-ByyV~1fUt~QRMgfPefnH8WW6FNawL4fJ-3d~JAz3mpElpCXj-Fp-8yeY9~a2M24ysTeLt2iAseFUb2XerQYZwFv-j6zK5wUx32A8YTEm~W7bu3g211ZuRuKVAnWz~knLyQ__" 
-                alt="Aluminum Thermal Module" 
+                src="https://private-us-east-1.manuscdn.com/sessionFile/aWh25CCAzOEVEA23UVSeIs/sandbox/x74W8yGhLIm4swOilNjPYT-img-1_1771158973000_na1fn_YWx1bWludW0tbW9kdWxlLXByZWNpc2lvbi1kZXNpZ24.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvYVdoMjVDQ0F6T0VWRUEyM1VWU2VJcy9zYW5kYm94L3g3NFc4eUdoTEltNHN3T2lsTmpQWVQtaW1nLTFfMTc3MTE1ODk3MzAwMF9uYTFmbl9ZV3gxYldsdWRXMHRiVzlrZFd4bExYQnlaV05wYzJsdmJpMWtaWE5wWjI0LnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=FmjvuVMGV-sZ5uK~c7vjFV0gJobxqXwtERwX2uaUHxM-WnhrKbQda0t0G4-14JIL8mpeeRkx71RAXjF3deoDL-1tSPQGKaHn1reXPw2CPEEEmEx9INu0bIljvV8IfN5PinVJu-sSIoB96EiBQGHQbqgLR22KYXRX3ZtdexemZrbRRu26zXYzWrqYAa-5Vllcr7tkdKFD61G6qY58xpI9heeDHwsXttAqXgaXw~R7rAMOjA4fXsRPKNUSBz6Q1WsLs93-Ss61a1miWbjSFePb-LBiKpiCgZkGwetJaCk-F014gDUiyzynDvor0iOlNMy7Z0z0O8CYvYB3f6voxkC6aw__" 
+                alt="鋁合金模組設計" 
                 className="relative z-10 w-full h-full object-contain drop-shadow-[0_0_50px_rgba(0,240,255,0.3)] rounded-2xl border border-white/10"
               />
             </div>
           </div>
         </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce opacity-50">
-          <span className="text-[10px] font-mono tracking-widest uppercase">Scroll</span>
-          <div className="w-[1px] h-10 bg-gradient-to-b from-primary to-transparent" />
-        </div>
       </section>
 
-      {/* Key Advantages Section */}
-      <section className="py-24 relative bg-background">
-        <div className="container">
-          <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-            <h2 className="font-display font-bold text-4xl md:text-5xl">核心優勢</h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-cyan-500 to-purple-500 mx-auto rounded-full" />
-            <p className="text-muted-foreground text-lg">
-              Therlect 汎海科技的鋁合金模組設計方案結合精密工程與先進製造，為筆記本電腦提供最優化的散熱解決方案。
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {advantages.map((adv, index) => (
-              <div key={index} className="group relative overflow-hidden rounded-xl border border-white/10 bg-card/50 hover:bg-card/80 transition-all duration-500 hover:border-primary/50 p-8">
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="relative z-10">
-                  <div className="w-12 h-12 bg-background border border-white/10 rounded-lg flex items-center justify-center mb-6 group-hover:border-primary/50 group-hover:bg-primary/10 transition-all">
-                    <adv.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <h3 className="font-display font-bold text-2xl mb-2 group-hover:text-primary transition-colors">{adv.title}</h3>
-                  <p className="text-sm text-muted-foreground font-mono mb-4">{adv.subtitle}</p>
-                  <p className="text-muted-foreground leading-relaxed">{adv.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Aluminum Modules Design Section */}
+      {/* Design Options Section */}
       <section className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-secondary/30" />
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-[120px] -z-10" />
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-[120px] -z-10" />
+        </div>
 
         <div className="container relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
             <h2 className="font-display font-bold text-4xl md:text-5xl">鋁合金模組設計方案</h2>
             <div className="w-20 h-1 bg-gradient-to-r from-cyan-500 to-purple-500 mx-auto rounded-full" />
             <p className="text-muted-foreground text-lg">
-              針對不同的筆記本電腦需求，我們提供四大類鋁合金模組設計方案，每一款都經過精心設計與優化。
+              針對不同的產品需求，設計高效、滿足且結構緊湊的客製化筆記本模組
             </p>
           </div>
 
-          <div className="space-y-8">
-            {aluminumModules.map((module, index) => (
-              <div key={module.id} className="group">
-                <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-cols-2 lg:auto-cols-fr' : ''}`}>
-                  {/* Image */}
-                  <div className={`relative rounded-xl overflow-hidden border border-white/10 shadow-xl ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                    <img 
-                      src={module.image}
-                      alt={module.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
-                  </div>
-
-                  {/* Content */}
-                  <div className={`space-y-6 ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
+          <div className="grid grid-cols-1 gap-8">
+            {designOptions.map((option) => (
+              <div key={option.id} className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl" />
+                <div className="relative p-8 rounded-2xl border border-white/10 bg-card/50 group-hover:bg-card/80 transition-all duration-500">
+                  <div className="space-y-4">
                     <div className="space-y-2">
-                      <h3 className="font-display font-bold text-3xl group-hover:text-primary transition-colors">{module.title}</h3>
-                      <p className="text-sm text-muted-foreground font-mono">{module.subtitle}</p>
+                      <h3 className="font-display font-bold text-3xl group-hover:text-primary transition-colors">{option.title}</h3>
+                      <p className="text-sm text-muted-foreground font-mono">{option.subtitle}</p>
                     </div>
 
                     <p className="text-muted-foreground leading-relaxed">
-                      {module.description}
+                      {option.description}
                     </p>
 
                     {/* Expandable Details */}
                     <div className="space-y-4">
                       <button
-                        onClick={() => setExpandedModule(expandedModule === module.id ? null : module.id)}
+                        onClick={() => setExpandedOption(expandedOption === option.id ? null : option.id)}
                         className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-semibold"
                       >
-                        {expandedModule === module.id ? (
+                        {expandedOption === option.id ? (
                           <>
                             <ChevronUp className="w-5 h-5" />
                             收起詳情
@@ -226,31 +200,122 @@ export default function AluminumModuleDesign() {
                         )}
                       </button>
 
-                      {expandedModule === module.id && (
+                      {expandedOption === option.id && (
                         <div className="space-y-4 pt-4 border-t border-white/10 animate-in fade-in slide-in-from-top-4 duration-300">
                           <p className="text-muted-foreground leading-relaxed">
-                            {module.details}
+                            {option.details}
                           </p>
 
                           <div className="space-y-2">
-                            <h4 className="font-semibold text-sm">主要應用領域：</h4>
+                            <h4 className="font-semibold text-sm">核心特色：</h4>
                             <div className="grid grid-cols-2 gap-2">
-                              {module.applications.map((app, i) => (
+                              {option.highlights.map((highlight, i) => (
                                 <div key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
                                   <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                                  {app}
+                                  {highlight}
                                 </div>
                               ))}
                             </div>
                           </div>
 
                           <Button className="w-full bg-primary hover:bg-primary/90 text-white rounded-sm mt-4">
-                            諮詢此方案
+                            立即諮詢此方案
                             <ArrowRight className="ml-2 w-4 h-4" />
                           </Button>
                         </div>
                       )}
                     </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Aluminum Modules Section */}
+      <section className="py-24 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-[120px] -z-10" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-[120px] -z-10" />
+        </div>
+
+        <div className="container relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <h2 className="font-display font-bold text-4xl md:text-5xl">設計方案詳解</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-cyan-500 to-purple-500 mx-auto rounded-full" />
+            <p className="text-muted-foreground text-lg">
+              我們提供四種專業的鋁合金模組設計方案，滿足不同筆記本電腦的散熱需求
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-12">
+            {aluminumModules.map((module, index) => (
+              <div key={module.id} className={`grid grid-cols-1 lg:grid-cols-2 gap-8 items-center ${index % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}>
+                {/* Image */}
+                <div className={`relative group ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
+                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl" />
+                  <img 
+                    src={module.image} 
+                    alt={module.title}
+                    className="relative z-10 w-full h-auto rounded-2xl border border-white/10 group-hover:border-primary/50 transition-all duration-500 shadow-2xl group-hover:shadow-[0_0_40px_rgba(0,240,255,0.3)]"
+                  />
+                </div>
+
+                {/* Content */}
+                <div className={`space-y-6 ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
+                  <div className="space-y-2">
+                    <h3 className="font-display font-bold text-3xl">{module.title}</h3>
+                    <p className="text-sm text-muted-foreground font-mono">{module.subtitle}</p>
+                  </div>
+
+                  <p className="text-muted-foreground leading-relaxed">
+                    {module.description}
+                  </p>
+
+                  {/* Expandable Details */}
+                  <div className="space-y-4">
+                    <button
+                      onClick={() => setExpandedModule(expandedModule === module.id ? null : module.id)}
+                      className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-semibold"
+                    >
+                      {expandedModule === module.id ? (
+                        <>
+                          <ChevronUp className="w-5 h-5" />
+                          收起詳情
+                        </>
+                      ) : (
+                        <>
+                          <ChevronDown className="w-5 h-5" />
+                          了解更多
+                        </>
+                      )}
+                    </button>
+
+                    {expandedModule === module.id && (
+                      <div className="space-y-4 pt-4 border-t border-white/10 animate-in fade-in slide-in-from-top-4 duration-300">
+                        <p className="text-muted-foreground leading-relaxed">
+                          {module.details}
+                        </p>
+
+                        <div className="space-y-2">
+                          <h4 className="font-semibold text-sm">主要應用領域：</h4>
+                          <div className="grid grid-cols-2 gap-2">
+                            {module.applications.map((app, i) => (
+                              <div key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
+                                <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                                {app}
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+
+                        <Button className="w-full bg-primary hover:bg-primary/90 text-white rounded-sm mt-4">
+                          諮詢此方案
+                          <ArrowRight className="ml-2 w-4 h-4" />
+                        </Button>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
