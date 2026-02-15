@@ -21,6 +21,7 @@ export default function Navbar() {
     { href: "/", label: "首頁" },
     { href: "/technology", label: "核心技術" },
     { href: "/solutions", label: "解決方案" },
+    { href: "/cfd-analysis", label: "CFD 分析" },
     { href: "/about", label: "關於我們" },
     { href: "/contact", label: "聯絡我們" },
   ];
