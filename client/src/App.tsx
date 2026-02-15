@@ -9,6 +9,7 @@ import Technology from "./pages/Technology";
 import Solutions from "./pages/Solutions";
 import CFDAnalysis from "./pages/CFDAnalysis";
 import ThermalModuleDesign from "./pages/ThermalModuleDesign";
+import AluminumModuleDesign from "./pages/AluminumModuleDesign";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 
@@ -21,6 +22,7 @@ function Router() {
       <Route path={"/solutions"} component={Solutions} />
       <Route path={"/cfd-analysis"} component={CFDAnalysis} />
       <Route path={"/thermal-module-design"} component={ThermalModuleDesign} />
+      <Route path={"/aluminum-module-design"} component={AluminumModuleDesign} />
       <Route path={"/about"} component={About} />
       <Route path={"/contact"} component={Contact} />
       <Route path={"/404"} component={NotFound} />

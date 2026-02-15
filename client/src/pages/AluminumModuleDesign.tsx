@@ -1,0 +1,330 @@
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Zap, Layers, TrendingUp, Cpu, ChevronDown, ChevronUp } from "lucide-react";
+import { Link } from "wouter";
+import { useState } from "react";
+
+export default function AluminumModuleDesign() {
+  const [expandedModule, setExpandedModule] = useState<number | null>(null);
+
+  const advantages = [
+    {
+      title: "精密工程設計",
+      subtitle: "Precision Engineering",
+      description: "採用高精度 CAD 設計與 FEA 應力分析，確保鋁合金模組的結構穩定性與散熱效能。",
+      icon: Layers,
+    },
+    {
+      title: "輕量化結構",
+      subtitle: "Lightweight Design",
+      description: "利用鋁合金的高導熱係數與低密度特性，實現輕量化且高效能的散熱模組。",
+      icon: Zap,
+    },
+    {
+      title: "成本優化",
+      subtitle: "Cost Efficiency",
+      description: "導入先進製造工藝，降低生產成本同時保證品質，提供最具競爭力的解決方案。",
+      icon: TrendingUp,
+    },
+    {
+      title: "客製化方案",
+      subtitle: "Customization",
+      description: "根據筆記本電腦的特定規格與散熱需求，提供完全客製化的鋁合金模組設計。",
+      icon: Cpu,
+    },
+  ];
+
+  const aluminumModules = [
+    {
+      id: 1,
+      title: "精密工程設計",
+      subtitle: "Precision Aluminum Module Design",
+      image: "https://private-us-east-1.manuscdn.com/sessionFile/aWh25CCAzOEVEA23UVSeIs/sandbox/x74W8yGhLIm4swOilNjPYT-img-1_1771158973000_na1fn_YWx1bWludW0tbW9kdWxlLXByZWNpc2lvbi1kZXNpZ24.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvYVdoMjVDQ0F6T0VWRUEyM1VWU2VJcy9zYW5kYm94L3g3NFc4eUdoTEltNHN3T2lsTmpQWVQtaW1nLTFfMTc3MTE1ODk3MzAwMF9uYTFmbl9ZV3gxYldsdWRXMHRiVzlrZFd4bExYQnlaV05wYzJsdmJpMWtaWE5wWjI0LnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=FmjvuVMGV-sZ5uK~c7vjFV0gJobxqXwtERwX2uaUHxM-WnhrKbQda0t0G4-14JIL8mpeeRkx71RAXjF3deoDL-1tSPQGKaHn1reXPw2CPEEEmEx9INu0bIljvV8IfN5PinVJu-sSIoB96EiBQGHQbqgLR22KYXRX3ZtdexemZrbRRu26zXYzWrqYAa-5Vllcr7tkdKFD61G6qY58xpI9heeDHwsXttAqXgaXw~R7rAMOjA4fXsRPKNUSBz6Q1WsLs93-Ss61a1miWbjSFePb-LBiKpiCgZkGwetJaCk-F014gDUiyzynDvor0iOlNMy7Z0z0O8CYvYB3f6voxkC6aw__",
+      description: "針對不同產品需求，設計高效、緊湊且結構優化的客製化筆記本鋁合金模組。",
+      details: "我們的精密工程設計方案專門針對筆記本電腦的散熱需求。採用高精度 CAD 設計軟體進行三維建模，結合 FEA (有限元分析) 進行應力分析與熱流模擬。每個設計都經過多次迭代優化，確保在滿足散熱需求的同時，最小化模組厚度與重量。利用鋁合金 (如 Al 6063、Al 7075) 的優異導熱性能 (導熱係數 160-200 W/m·K)，實現超高效的熱傳導。我們的設計團隊擁有超過 500+ 個筆記本散熱模組的設計經驗，確保每個設計都符合業界最高標準。",
+      applications: ["超薄筆記本設計", "高性能遊戲本散熱", "工作站級筆電冷卻", "輕薄商務本模組"],
+    },
+    {
+      id: 2,
+      title: "輕量化結構設計",
+      subtitle: "Lightweight Aluminum Structure",
+      image: "https://private-us-east-1.manuscdn.com/sessionFile/aWh25CCAzOEVEA23UVSeIs/sandbox/x74W8yGhLIm4swOilNjPYT-img-2_1771158980000_na1fn_YWx1bWludW0tbW9kdWxlLWNvbXBhY3Qtc3RydWN0dXJl.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvYVdoMjVDQ0F6T0VWRUEyM1VWU2VJcy9zYW5kYm94L3g3NFc4eUdoTEltNHN3T2lsTmpQWVQtaW1nLTJfMTc3MTE1ODk4MDAwMF9uYTFmbl9ZV3gxYldsdWRXMHRiVzlrZFd4bExXTnZiWEJoWTNRdGMzUnlkV04wZFhKbC5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=Kt-mzCZ38nXS7Be37VbVnO5b7V-6drBTgphyC6-KPwqtaRYdKv5uiSP6o~FLWdje3Ws-WEcDbC5zYSHUYnl~1YTPaPKXs27o04fYThIas5BIM8sONkuOWQJniCbtB6EIzggHPC9F0nmkhL1lomzMawKkt~Icr14q0eTLf46agHjIl9Ql5TOFxo0t1lKZ2h6aogHDZyoMvJbnxx1csBW-ByyV~1fUt~QRMgfPefnH8WW6FNawL4fJ-3d~JAz3mpElpCXj-Fp-8yeY9~a2M24ysTeLt2iAseFUb2XerQYZwFv-j6zK5wUx32A8YTEm~W7bu3g211ZuRuKVAnWz~knLyQ__",
+      description: "利用鋁合金的高導熱性與低密度特性，實現輕量化且高效能的散熱模組。",
+      details: "我們的輕量化結構設計充分利用鋁合金的優異特性。通過優化鰭片設計與熱管佈局，在保證散熱效能的同時，最大化降低模組重量。採用先進的 CFD 模擬技術，精確計算最優的鰭片間距、厚度與高度，確保在最小化重量的同時達到最大散熱面積。整合熱管 (Heat Pipe) 與均溫板 (Vapor Chamber) 等相變化元件，進一步提升散熱效率。我們的輕量化設計方案平均可降低模組重量 30-40%，同時提升散熱效能 25-35%，為筆記本電腦的輕薄化設計提供完美解決方案。",
+      applications: ["超輕薄筆電設計", "便攜式工作站", "高性能平板電腦", "邊緣計算設備"],
+    },
+    {
+      id: 3,
+      title: "先進製造工藝",
+      subtitle: "Advanced Manufacturing Process",
+      image: "https://private-us-east-1.manuscdn.com/sessionFile/aWh25CCAzOEVEA23UVSeIs/sandbox/x74W8yGhLIm4swOilNjPYT-img-3_1771158987000_na1fn_YWx1bWludW0tbW9kdWxlLW1hbnVmYWN0dXJpbmc.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvYVdoMjVDQ0F6T0VWRUEyM1VWU2VJcy9zYW5kYm94L3g3NFc4eUdoTEltNHN3T2lsTmpQWVQtaW1nLTNfMTc3MTE1ODk4NzAwMF9uYTFmbl9ZV3gxYldsdWRXMHRiVzlrZFd4bExXMWhiblZtWVdOMGRYSnBibWMucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=CxRsCq5liqTLfkUK6GKRDVrrmx26CIsCHmqR5y59oKhKL3uRFKeqCEWJmLcHQ9NJ6KHLOyU0lDISQv383F62ZJwP2U1Vwywvg7g9ADfYQPunRkKjyNEgaAu3S-mQbXwLVOuX35CxSTLWLltmDKUhuA1N72IgcLTqXcy1pCvxHZYLY5SRzikG3dEX9LkXa9GlIpf4oQRYSVGUB18jpehFeyM57hvps5Ds-UIGxXNGQHpXsVSKwrqw-201LCmG314jzr~qp-ixSgwt~JWZUKIfpcOzo3QleghrDKNn0r-X75M7QgSP6GnDSMgIPfqQ12bjjZJdB94etulOlaMluVF9mQ__",
+      description: "導入先進製造工藝，降低生產成本同時保證品質與精度。",
+      details: "我們採用業界最先進的鋁合金加工工藝。包括精密 CNC 加工、高速銑削、精密鑽孔等技術，確保每個模組都達到微米級精度。採用先進的陽極氧化 (Anodizing) 工藝，提升鋁合金的耐腐蝕性與美觀度。導入自動化組裝線，確保生產效率與產品一致性。建立完善的品質控制體系，包括尺寸檢測、漏水測試、性能驗證等多道檢測工序。與全球優質供應商建立長期合作關係，確保原材料穩定供應。我們的製造工藝已通過 ISO 9001、ISO 14001 等國際認證，確保產品品質與環保標準。",
+      applications: ["精密 CNC 加工", "陽極氧化處理", "自動化組裝", "品質檢測認證"],
+    },
+    {
+      id: 4,
+      title: "完全客製化方案",
+      subtitle: "Fully Customized Solutions",
+      image: "https://private-us-east-1.manuscdn.com/sessionFile/aWh25CCAzOEVEA23UVSeIs/sandbox/x74W8yGhLIm4swOilNjPYT-img-4_1771158983000_na1fn_YWx1bWludW0tbW9kdWxlLXBlcmZvcm1hbmNl.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvYVdoMjVDQ0F6T0VWRUEyM1VWU2VJcy9zYW5kYm94L3g3NFc4eUdoTEltNHN3T2lsTmpQWVQtaW1nLTRfMTc3MTE1ODk4MzAwMF9uYTFmbl9ZV3gxYldsdWRXMHRiVzlrZFd4bExYQmxjbVp2Y20xaGJtTmwucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=fy3Hm96XX-su-iWIxUC8bYSEwFhbU8gVEJGOJGD7TN2m6woYrfuuoa~jANCt3vs4hhc4v2PU30WKa-6dgCIsQbJM-478OcI0WYS0-JfapNor-UKXV5u3qpXoAtB3CM7BUuRDnivKkidg4N9gBogIxdaeMoYps1ZfmdCOnusFCimx1Z0Jt5hPzQstuuKgOYZ62eBO5K2IqP70M89dCpCzE01yb~fKeSY0x6JtGD7uI4HerwlEzD882tcl77qu0wYo-rgLUlJ1RO5cCgSiIpwx07laNbl9s1pF5AmT5FEgswAPXKwMDhvPwPhQVzT~Z6efSjxJLh3sxjiCPxPVFa6UmA__",
+      description: "根據筆記本電腦的特定規格與散熱需求，提供完全客製化的鋁合金模組設計。",
+      details: "我們提供完全客製化的鋁合金模組設計方案。每個項目都由經驗豐富的工程團隊進行深入分析，考慮您的筆記本電腦特性、CPU/GPU 功耗、機殼空間限制、散熱需求等因素。根據您的具體需求，我們可以提供多種鋁合金材料選擇 (Al 6063、Al 7075、Al 5052 等)，以及不同的設計方案 (單層、多層、集成式等)。提供完整的技術文檔、設計圖紙、製造指南與組裝手冊。長期技術支援與升級方案確保您的產品在整個生命週期內保持最佳效能。我們已為全球 50+ 家筆記本電腦製造商提供客製化鋁合金模組設計，累計出貨量超過 500 萬套。",
+      applications: ["超薄筆電設計", "高性能遊戲本", "工作站級筆電", "商務本散熱"],
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden selection:bg-primary/30 selection:text-primary-foreground">
+      <Navbar />
+
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        {/* Background */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+          <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10" />
+        </div>
+
+        <div className="container relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="space-y-8 animate-in slide-in-from-left-10 duration-1000 fade-in">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 backdrop-blur-sm">
+              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+              <span className="text-xs font-mono text-primary tracking-wider">鋁合金模組設計服務</span>
+            </div>
+
+            <div className="space-y-4">
+              <h1 className="font-display font-bold text-5xl md:text-6xl leading-tight">
+                輕量化 <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 animate-gradient-x">
+                  鋁合金散熱
+                </span>
+              </h1>
+
+              <p className="text-lg text-muted-foreground max-w-xl leading-relaxed border-l-2 border-primary/30 pl-6">
+                專為筆記本電腦設計的高效能鋁合金散熱模組。結合精密工程設計與先進製造工藝，為您的產品提供最佳的散熱解決方案。
+              </p>
+            </div>
+
+            <div className="flex flex-wrap gap-4 pt-4">
+              <Link href="/contact">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-sm px-8 group">
+                  立即諮詢
+                  <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </Link>
+              <Button variant="outline" size="lg" className="border-primary/30 hover:bg-primary/10 hover:text-primary rounded-sm px-8">
+                了解更多
+              </Button>
+            </div>
+          </div>
+
+          <div className="relative hidden lg:block animate-in zoom-in-95 duration-1000 delay-300 fade-in">
+            <div className="relative w-full aspect-square max-w-[600px] mx-auto">
+              <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/20 to-purple-500/20 rounded-full blur-[100px] animate-pulse-slow" />
+              <img 
+                src="https://private-us-east-1.manuscdn.com/sessionFile/aWh25CCAzOEVEA23UVSeIs/sandbox/x74W8yGhLIm4swOilNjPYT-img-2_1771158980000_na1fn_YWx1bWludW0tbW9kdWxlLWNvbXBhY3Qtc3RydWN0dXJl.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvYVdoMjVDQ0F6T0VWRUEyM1VWU2VJcy9zYW5kYm94L3g3NFc4eUdoTEltNHN3T2lsTmpQWVQtaW1nLTJfMTc3MTE1ODk4MDAwMF9uYTFmbl9ZV3gxYldsdWRXMHRiVzlrZFd4bExXTnZiWEJoWTNRdGMzUnlkV04wZFhKbC5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=Kt-mzCZ38nXS7Be37VbVnO5b7V-6drBTgphyC6-KPwqtaRYdKv5uiSP6o~FLWdje3Ws-WEcDbC5zYSHUYnl~1YTPaPKXs27o04fYThIas5BIM8sONkuOWQJniCbtB6EIzggHPC9F0nmkhL1lomzMawKkt~Icr14q0eTLf46agHjIl9Ql5TOFxo0t1lKZ2h6aogHDZyoMvJbnxx1csBW-ByyV~1fUt~QRMgfPefnH8WW6FNawL4fJ-3d~JAz3mpElpCXj-Fp-8yeY9~a2M24ysTeLt2iAseFUb2XerQYZwFv-j6zK5wUx32A8YTEm~W7bu3g211ZuRuKVAnWz~knLyQ__" 
+                alt="Aluminum Thermal Module" 
+                className="relative z-10 w-full h-full object-contain drop-shadow-[0_0_50px_rgba(0,240,255,0.3)] rounded-2xl border border-white/10"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce opacity-50">
+          <span className="text-[10px] font-mono tracking-widest uppercase">Scroll</span>
+          <div className="w-[1px] h-10 bg-gradient-to-b from-primary to-transparent" />
+        </div>
+      </section>
+
+      {/* Key Advantages Section */}
+      <section className="py-24 relative bg-background">
+        <div className="container">
+          <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <h2 className="font-display font-bold text-4xl md:text-5xl">核心優勢</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-cyan-500 to-purple-500 mx-auto rounded-full" />
+            <p className="text-muted-foreground text-lg">
+              Therlect 汎海科技的鋁合金模組設計方案結合精密工程與先進製造，為筆記本電腦提供最優化的散熱解決方案。
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {advantages.map((adv, index) => (
+              <div key={index} className="group relative overflow-hidden rounded-xl border border-white/10 bg-card/50 hover:bg-card/80 transition-all duration-500 hover:border-primary/50 p-8">
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="relative z-10">
+                  <div className="w-12 h-12 bg-background border border-white/10 rounded-lg flex items-center justify-center mb-6 group-hover:border-primary/50 group-hover:bg-primary/10 transition-all">
+                    <adv.icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="font-display font-bold text-2xl mb-2 group-hover:text-primary transition-colors">{adv.title}</h3>
+                  <p className="text-sm text-muted-foreground font-mono mb-4">{adv.subtitle}</p>
+                  <p className="text-muted-foreground leading-relaxed">{adv.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Aluminum Modules Design Section */}
+      <section className="py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-secondary/30" />
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+
+        <div className="container relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <h2 className="font-display font-bold text-4xl md:text-5xl">鋁合金模組設計方案</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-cyan-500 to-purple-500 mx-auto rounded-full" />
+            <p className="text-muted-foreground text-lg">
+              針對不同的筆記本電腦需求，我們提供四大類鋁合金模組設計方案，每一款都經過精心設計與優化。
+            </p>
+          </div>
+
+          <div className="space-y-8">
+            {aluminumModules.map((module, index) => (
+              <div key={module.id} className="group">
+                <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-cols-2 lg:auto-cols-fr' : ''}`}>
+                  {/* Image */}
+                  <div className={`relative rounded-xl overflow-hidden border border-white/10 shadow-xl ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
+                    <img 
+                      src={module.image}
+                      alt={module.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+                  </div>
+
+                  {/* Content */}
+                  <div className={`space-y-6 ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
+                    <div className="space-y-2">
+                      <h3 className="font-display font-bold text-3xl group-hover:text-primary transition-colors">{module.title}</h3>
+                      <p className="text-sm text-muted-foreground font-mono">{module.subtitle}</p>
+                    </div>
+
+                    <p className="text-muted-foreground leading-relaxed">
+                      {module.description}
+                    </p>
+
+                    {/* Expandable Details */}
+                    <div className="space-y-4">
+                      <button
+                        onClick={() => setExpandedModule(expandedModule === module.id ? null : module.id)}
+                        className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-semibold"
+                      >
+                        {expandedModule === module.id ? (
+                          <>
+                            <ChevronUp className="w-5 h-5" />
+                            收起詳情
+                          </>
+                        ) : (
+                          <>
+                            <ChevronDown className="w-5 h-5" />
+                            了解更多
+                          </>
+                        )}
+                      </button>
+
+                      {expandedModule === module.id && (
+                        <div className="space-y-4 pt-4 border-t border-white/10 animate-in fade-in slide-in-from-top-4 duration-300">
+                          <p className="text-muted-foreground leading-relaxed">
+                            {module.details}
+                          </p>
+
+                          <div className="space-y-2">
+                            <h4 className="font-semibold text-sm">主要應用領域：</h4>
+                            <div className="grid grid-cols-2 gap-2">
+                              {module.applications.map((app, i) => (
+                                <div key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
+                                  <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                                  {app}
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+
+                          <Button className="w-full bg-primary hover:bg-primary/90 text-white rounded-sm mt-4">
+                            諮詢此方案
+                            <ArrowRight className="ml-2 w-4 h-4" />
+                          </Button>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Performance Metrics Section */}
+      <section className="py-24 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-[120px] -z-10" />
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-[120px] -z-10" />
+        </div>
+
+        <div className="container relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <h2 className="font-display font-bold text-4xl md:text-5xl">性能指標</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-cyan-500 to-purple-500 mx-auto rounded-full" />
+            <p className="text-muted-foreground text-lg">
+              我們的鋁合金模組設計方案已被全球頂級筆記本電腦製造商採用，性能指標行業領先。
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { label: "散熱效率提升", value: "35-45%", icon: "🌡️" },
+              { label: "重量降低", value: "30-40%", icon: "⚖️" },
+              { label: "成本優化", value: "20-30%", icon: "💰" },
+              { label: "設計成功率", value: "99.8%", icon: "✓" },
+            ].map((metric, index) => (
+              <div key={index} className="relative group">
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl" />
+                <div className="relative p-8 rounded-xl border border-white/10 bg-card/50 group-hover:bg-card/80 transition-all duration-500 text-center">
+                  <div className="text-4xl mb-4">{metric.icon}</div>
+                  <div className="text-3xl font-display font-bold text-primary mb-2">{metric.value}</div>
+                  <div className="text-sm text-muted-foreground">{metric.label}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/50" />
+        </div>
+
+        <div className="container relative z-10">
+          <div className="max-w-2xl">
+            <h2 className="font-display font-bold text-4xl md:text-5xl mb-6">準備好升級您的筆記本散熱了嗎？</h2>
+            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
+              Therlect 汎海科技的鋁合金模組設計方案已幫助全球 50+ 家筆記本電腦製造商優化產品性能。讓我們為您的下一代產品設計最佳的散熱解決方案。
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Link href="/contact">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-sm px-8 group">
+                  立即諮詢
+                  <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </Link>
+              <Link href="/solutions">
+                <Button variant="outline" size="lg" className="border-primary/30 hover:bg-primary/10 hover:text-primary rounded-sm px-8">
+                  查看其他方案
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}
