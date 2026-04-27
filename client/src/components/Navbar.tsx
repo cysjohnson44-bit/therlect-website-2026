@@ -20,6 +20,7 @@ export default function Navbar() {
   const navLinks = [
     { href: "/", label: "首頁" },
     { href: "/technology", label: "核心技術" },
+    { href: "/thermal-management-solution", label: "熱管理方案" },
     { href: "/solutions", label: "解決方案" },
     { href: "/cfd-analysis", label: "CFD 分析" },
     { href: "/thermal-module-design", label: "散熱模組" },
