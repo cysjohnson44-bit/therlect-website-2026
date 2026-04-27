@@ -136,7 +136,7 @@ export default function About() {
               { name: "NTU", logo: "/manus-storage/09-ntu_9e58019b.png" },
               { name: "PCEE", logo: "/manus-storage/10-pcee_436f4ed5.jpg" },
               { name: "Mytek", logo: "/manus-storage/11-mytek_dec82098.png" },
-              { name: "Cruise", logo: "/manus-storage/12-cruise_5cddcdd5.jpg" }
+              { name: "Cruise", logo: "/manus-storage/12-cruise-new_e02d3e4e.png" }
             ].map((client, i) => (
               <div key={i} className="h-32 flex flex-col items-center justify-center border border-white/10 rounded-xl bg-card/50 hover:bg-card/80 hover:border-primary/50 transition-all cursor-default group shadow-lg hover:shadow-xl hover:-translate-y-1 overflow-hidden">
                 <img 
