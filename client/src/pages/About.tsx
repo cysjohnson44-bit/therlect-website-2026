@@ -125,22 +125,26 @@ export default function About() {
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {[
-              { name: "Foxconn", logo: "🏢" },
-              { name: "HP", logo: "🖥️" },
-              { name: "Audeo", logo: "🎙️" },
-              { name: "Arcadyan", logo: "📡" },
-              { name: "FIH Mobile", logo: "📱" },
-              { name: "Gigatek", logo: "⚙️" },
-              { name: "AUO", logo: "💻" },
-              { name: "Kenmec", logo: "🔧" },
-              { name: "NTU", logo: "🎓" },
-              { name: "PCEE", logo: "🔌" },
-              { name: "Mytek", logo: "⚡" },
-              { name: "Cruise", logo: "🚗" }
+              { name: "Foxconn", logo: "/manus-storage/01-foxconn_7d583a76.png" },
+              { name: "HP", logo: "/manus-storage/02-hp_79c14ca0.png" },
+              { name: "Audeo", logo: "/manus-storage/03-audeo_ae32f493.png" },
+              { name: "Arcadyan", logo: "/manus-storage/04-arcadyan_272eb338.png" },
+              { name: "FIH Mobile", logo: "/manus-storage/05-fih-mobile_f5a7089b.jpg" },
+              { name: "Gigatek", logo: "/manus-storage/06-gigatek_86488c8c.jpg" },
+              { name: "AUO", logo: "/manus-storage/07-auo_be94b1a4.webp" },
+              { name: "Kenmec", logo: "/manus-storage/08-kenmec_1f0cafaf.jpeg" },
+              { name: "NTU", logo: "/manus-storage/09-ntu_9e58019b.png" },
+              { name: "PCEE", logo: "/manus-storage/10-pcee_436f4ed5.jpg" },
+              { name: "Mytek", logo: "/manus-storage/11-mytek_dec82098.png" },
+              { name: "Cruise", logo: "/manus-storage/12-cruise_5cddcdd5.jpg" }
             ].map((client, i) => (
-              <div key={i} className="h-32 flex flex-col items-center justify-center border border-white/10 rounded-xl bg-card/50 hover:bg-card/80 hover:border-primary/50 transition-all cursor-default group shadow-lg hover:shadow-xl hover:-translate-y-1">
-                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">{client.logo}</div>
-                <span className="font-display font-semibold text-sm text-muted-foreground group-hover:text-foreground transition-colors text-center px-2">{client.name}</span>
+              <div key={i} className="h-32 flex flex-col items-center justify-center border border-white/10 rounded-xl bg-card/50 hover:bg-card/80 hover:border-primary/50 transition-all cursor-default group shadow-lg hover:shadow-xl hover:-translate-y-1 overflow-hidden">
+                <img 
+                  src={client.logo} 
+                  alt={client.name}
+                  className="w-20 h-20 object-contain mb-3 group-hover:scale-110 transition-transform"
+                />
+                <span className="font-display font-semibold text-xs text-muted-foreground group-hover:text-foreground transition-colors text-center px-2">{client.name}</span>
               </div>
             ))}
           </div>
