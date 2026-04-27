@@ -118,15 +118,29 @@ export default function About() {
       {/* Clients Logo Grid */}
       <section className="py-24">
         <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="font-display font-bold text-3xl mb-4">我們的客戶</h2>
-            <p className="text-muted-foreground">感謝這些優秀企業選擇 Therlect 作為合作夥伴</p>
+          <div className="text-center mb-16">
+            <h2 className="font-display font-bold text-4xl md:text-5xl mb-4">我們的客戶</h2>
+            <p className="text-muted-foreground text-lg">感謝這些優秀企業選擇汎海作為合作夥伴</p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-            {["FOXCONN", "AUO", "HP", "Cruise", "MYTEK", "FIH Mobile", "Arcadyan", "KENMEC", "Auden", "NTU", "Anli", "華宮"].map((client, i) => (
-              <div key={i} className="h-24 flex items-center justify-center border border-white/5 rounded-lg bg-card/30 hover:bg-card/50 hover:border-primary/30 transition-all cursor-default group">
-                <span className="font-display font-bold text-lg text-muted-foreground group-hover:text-foreground transition-colors">{client}</span>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+            {[
+              { name: "Foxconn", logo: "🏢" },
+              { name: "HP", logo: "🖥️" },
+              { name: "Audeo", logo: "🎙️" },
+              { name: "Arcadyan", logo: "📡" },
+              { name: "FIH Mobile", logo: "📱" },
+              { name: "Gigatek", logo: "⚙️" },
+              { name: "AUO", logo: "💻" },
+              { name: "Kenmec", logo: "🔧" },
+              { name: "NTU", logo: "🎓" },
+              { name: "PCEE", logo: "🔌" },
+              { name: "Mytek", logo: "⚡" },
+              { name: "Cruise", logo: "🚗" }
+            ].map((client, i) => (
+              <div key={i} className="h-32 flex flex-col items-center justify-center border border-white/10 rounded-xl bg-card/50 hover:bg-card/80 hover:border-primary/50 transition-all cursor-default group shadow-lg hover:shadow-xl hover:-translate-y-1">
+                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">{client.logo}</div>
+                <span className="font-display font-semibold text-sm text-muted-foreground group-hover:text-foreground transition-colors text-center px-2">{client.name}</span>
               </div>
             ))}
           </div>
