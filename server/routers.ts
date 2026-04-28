@@ -5,6 +5,7 @@ import { publicProcedure, router } from "./_core/trpc";
 import { z } from "zod";
 import { createBooking, getBookings, saveChatMessage, getChatHistory } from "./db";
 import { invokeLLM } from "./_core/llm";
+import { sendEmail, generateBookingNotificationTemplate, generateBookingConfirmationTemplate, generateContactEmailTemplate, generateContactConfirmationTemplate } from "./_core/email";
 
 export const appRouter = router({
   system: systemRouter,
@@ -38,6 +39,31 @@ export const appRouter = router({
           message: input.message || null,
           status: "pending",
         });
+
+        // Send confirmation email to user
+        await sendEmail({
+          to: input.email,
+          subject: "預約洽談確認 - Therlect 汎海科技",
+          htmlContent: generateBookingConfirmationTemplate({
+            name: input.name,
+            date: input.date,
+            message: input.message,
+          }),
+        });
+
+        // Send notification email to admin
+        await sendEmail({
+          to: "jimmy.chen@therlect.com",
+          subject: `新的預約洽談申請 - ${input.name}`,
+          htmlContent: generateBookingNotificationTemplate({
+            name: input.name,
+            email: input.email,
+            phone: input.phone,
+            date: input.date,
+            message: input.message,
+          }),
+        });
+
         return booking;
       }),
     list: publicProcedure
@@ -47,6 +73,49 @@ export const appRouter = router({
       }))
       .query(async ({ input }) => {
         return getBookings(input.limit, input.offset);
+      }),
+  }),
+
+  // Contact form routes
+  contact: router({
+    submit: publicProcedure
+      .input(z.object({
+        name: z.string().min(1),
+        email: z.string().email(),
+        phone: z.string().min(1),
+        company: z.string().optional(),
+        subject: z.string().min(1),
+        message: z.string().min(1),
+      }))
+      .mutation(async ({ input }) => {
+        // Send confirmation email to user
+        await sendEmail({
+          to: input.email,
+          subject: `我們已收到您的訊息 - ${input.subject}`,
+          htmlContent: generateContactConfirmationTemplate({
+            name: input.name,
+            subject: input.subject,
+          }),
+        });
+
+        // Send contact form to admin
+        await sendEmail({
+          to: "jimmy.chen@therlect.com",
+          subject: `新的聯絡表單提交 - ${input.subject} (來自 ${input.name})`,
+          htmlContent: generateContactEmailTemplate({
+            name: input.name,
+            email: input.email,
+            phone: input.phone,
+            company: input.company,
+            subject: input.subject,
+            message: input.message,
+          }),
+        });
+
+        return {
+          success: true,
+          message: "訊息已發送，我們將在 24 小時內與您聯繫。",
+        };
       }),
   }),
 

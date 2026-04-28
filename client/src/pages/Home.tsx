@@ -20,11 +20,32 @@ export default function Home() {
     message: "",
   });
 
-  const handleBookingSubmit = (e: React.FormEvent) => {
+  const handleBookingSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Booking submitted:", bookingData);
-    setIsBookingOpen(false);
-    setBookingData({ name: "", email: "", phone: "", date: "", message: "" });
+    
+    try {
+      const response = await fetch('/api/trpc/booking.create', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          json: bookingData,
+        }),
+        credentials: 'include',
+      });
+      
+      if (response.ok) {
+        setIsBookingOpen(false);
+        setBookingData({ name: "", email: "", phone: "", date: "", message: "" });
+        // Show success message using toast if available
+        console.log("Booking submitted successfully");
+      } else {
+        console.error("Booking submission failed");
+      }
+    } catch (error) {
+      console.error('Booking submission error:', error);
+    }
   };
 
   return (

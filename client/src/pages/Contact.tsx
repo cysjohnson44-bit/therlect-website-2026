@@ -10,16 +10,43 @@ import { toast } from "sonner";
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    const formData = new FormData(e.target as HTMLFormElement);
+    const name = formData.get('name') as string;
+    const email = formData.get('email') as string;
+    const phone = formData.get('phone') as string;
+    const company = formData.get('company') as string;
+    const subject = formData.get('subject') as string;
+    const message = formData.get('message') as string;
+    
+    try {
+      const response = await fetch('/api/trpc/contact.submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          json: { name, email, phone, company, subject, message },
+        }),
+        credentials: 'include',
+      });
+      
+      if (response.ok) {
+        setIsSubmitting(false);
+        toast.success("訊息已發送！我們會在 24 小時內與您聯繫。");
+        (e.target as HTMLFormElement).reset();
+      } else {
+        setIsSubmitting(false);
+        toast.error("發送失敗，請稍後重試。");
+      }
+    } catch (error) {
       setIsSubmitting(false);
-      toast.success("訊息已發送！我們會盡快與您聯繫。");
-      (e.target as HTMLFormElement).reset();
-    }, 1500);
+      toast.error("發送失敗，請稍後重試。");
+      console.error('Form submission error:', error);
+    }
   };
 
   return (
@@ -117,33 +144,33 @@ export default function Contact() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-medium text-muted-foreground">姓名</label>
-                    <Input id="name" required placeholder="您的姓名" className="bg-background/50 border-white/10 focus:border-primary/50" />
+                    <Input id="name" name="name" required placeholder="您的姓名" className="bg-background/50 border-white/10 focus:border-primary/50" />
                   </div>
                   <div className="space-y-2">
                     <label htmlFor="company" className="text-sm font-medium text-muted-foreground">公司名稱</label>
-                    <Input id="company" placeholder="您的公司" className="bg-background/50 border-white/10 focus:border-primary/50" />
+                    <Input id="company" name="company" placeholder="您的公司" className="bg-background/50 border-white/10 focus:border-primary/50" />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label htmlFor="email" className="text-sm font-medium text-muted-foreground">電子郵件</label>
-                    <Input id="email" type="email" required placeholder="name@example.com" className="bg-background/50 border-white/10 focus:border-primary/50" />
+                    <Input id="email" name="email" type="email" required placeholder="name@example.com" className="bg-background/50 border-white/10 focus:border-primary/50" />
                   </div>
                   <div className="space-y-2">
                     <label htmlFor="phone" className="text-sm font-medium text-muted-foreground">聯絡電話</label>
-                    <Input id="phone" type="tel" placeholder="+886 912 345 678" className="bg-background/50 border-white/10 focus:border-primary/50" />
+                    <Input id="phone" name="phone" type="tel" placeholder="+886 912 345 678" className="bg-background/50 border-white/10 focus:border-primary/50" />
                   </div>
                 </div>
 
                 <div className="space-y-2">
                   <label htmlFor="subject" className="text-sm font-medium text-muted-foreground">主旨</label>
-                  <Input id="subject" required placeholder="您感興趣的服務或產品" className="bg-background/50 border-white/10 focus:border-primary/50" />
+                  <Input id="subject" name="subject" required placeholder="您感興趣的服務或產品" className="bg-background/50 border-white/10 focus:border-primary/50" />
                 </div>
 
                 <div className="space-y-2">
                   <label htmlFor="message" className="text-sm font-medium text-muted-foreground">訊息內容</label>
-                  <Textarea id="message" required placeholder="請詳細描述您的需求..." className="min-h-[150px] bg-background/50 border-white/10 focus:border-primary/50 resize-none" />
+                  <Textarea id="message" name="message" required placeholder="請詳細描述您的需求..." className="min-h-[150px] bg-background/50 border-white/10 focus:border-primary/50 resize-none" />
                 </div>
 
                 <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-white h-12 text-lg" disabled={isSubmitting}>
