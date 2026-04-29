@@ -11,7 +11,7 @@ export default function Solutions() {
       title: "概念與設計",
       shortDesc: "根據客戶需求進行初步熱評估，提出多種可行的散熱方案。",
       fullDesc: "在專案初期，我們深入分析您的產品特性、應用場景與性能需求。通過詳細的熱評估，識別潛在的熱管理瓶頸。我們考量空間限制、成本預算、製造工藝與效能目標，為您規劃多個可行方案。每個方案都經過初步驗證，確保技術可行性與經濟合理性。我們的設計團隊將與您密切合作，選定最優方案作為後續開發的基礎。",
-      image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663272903053/jwHvyQoPhiZCFpvR.png",
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/solution-concept-design-efapdzoNfAtZR5YiUiXEmp.webp",
       color: "text-blue-400",
       bg: "bg-blue-500/10",
       border: "border-blue-500/20"
@@ -21,7 +21,7 @@ export default function Solutions() {
       title: "模擬與分析",
       shortDesc: "運用專業軟體進行詳細的熱模擬與結構分析，預測潛在問題。",
       fullDesc: "利用 Ansys、Flotherm 等業界領先的模擬軟體，我們進行多物理場耦合分析。通過三維熱流分析（CFD），精確預測溫度分佈、流場特性與熱應力。結合結構有限元分析（FEA），評估材料應力與變形。在開模前全面驗證設計，大幅降低試錯成本與開發週期。模擬結果包括詳細報告與可視化分析，為後續決策提供科學依據。",
-      image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663272903053/aApGfAiYqKtAClAW.png",
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/solution-simulation-analysis-Rn2foMtm5DEkjiLoAyqXC5.webp",
       color: "text-cyan-400",
       bg: "bg-cyan-500/10",
       border: "border-cyan-500/20"
@@ -31,7 +31,7 @@ export default function Solutions() {
       title: "原型製作",
       shortDesc: "快速製作功能原型，進行實機測試與驗證結果準確性。",
       fullDesc: "基於優化設計，我們快速製作功能原型進行實驗驗證。通過精密測試設備（紅外熱像儀、溫度傳感器陣列），採集真實工況下的溫度數據。對比模擬結果與實測數據，驗證模型準確性。若發現偏差，我們進行根因分析並優化模型參數。原型測試涵蓋常溫、高溫、低溫等多種工況，確保產品在全工作範圍內表現穩定。",
-      image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663272903053/nyKeqrnFctawsDuA.png",
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/solution-prototype-testing-78jHJTmMvZwbpHDXrPXccA.webp",
       color: "text-purple-400",
       bg: "bg-purple-500/10",
       border: "border-purple-500/20"
@@ -41,7 +41,7 @@ export default function Solutions() {
       title: "生產與製造",
       shortDesc: "整合供應鏈資源，提供高品質、高效率的量產服務。",
       fullDesc: "我們與全球優質供應商建立長期合作關係，確保原材料穩定供應。從精密模具開發、注塑成型、機械加工到組裝測試，每個環節都遵循嚴格的質量標準。採用先進的自動化設備與工藝，提高生產效率與產品一致性。建立完善的物流體系，確保及時交付。我們可根據訂單量提供靈活的生產方案，從小批量試產到大規模量產。",
-      image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663272903053/qpUTxXKBwEihgzqL.png",
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/solution-production-manufacturing-9MjHz5Ehra55U55Wp959pL.webp",
       color: "text-pink-400",
       bg: "bg-pink-500/10",
       border: "border-pink-500/20"
@@ -51,7 +51,7 @@ export default function Solutions() {
       title: "品質與優化",
       shortDesc: "持續追蹤產品質量，根據市場反饋進行設計優化。",
       fullDesc: "產品上市後，我們建立完整的品質追蹤機制。通過客戶反饋、現場測試與長期可靠性驗證，識別改進空間。根據實際運行數據與市場需求變化，進行持續的設計優化。優化內容包括材料選擇、工藝改進、成本降低與性能提升。我們致力於追求卓越，確保產品在整個生命週期內維持最佳效能與競爭力。定期提供技術支援與升級方案。",
-      image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663272903053/NkQoCIueOaVRewwB.png",
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/solution-quality-optimization-nF48UjT7wHtG4mTN7CmQjh.webp",
       color: "text-green-400",
       bg: "bg-green-500/10",
       border: "border-green-500/20"
@@ -63,25 +63,25 @@ export default function Solutions() {
       title: "消費性電子",
       description: "在消費性電子領域，我們專注於解決筆記型電腦、智慧型手機、遊戲主機和穿戴式裝置的散熱挑戰。隨著電子產品功能的不斷升級，發熱量也隨之增加。我們通過創新的散熱設計、高效能材料選擇和精密的熱流模擬，確保產品在高性能運行時保持最佳溫度。我們的解決方案不僅提升了產品的穩定性和壽命，還改善了用戶體驗。",
       items: ["筆記型電腦散熱", "智慧型手機散熱", "遊戲主機冷卻", "穿戴式裝置熱管理"],
-      image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663272903053/cFFkIfKuqfoIgihV.png"
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/application-consumer-electronics-solutions-8yoSh8DjZR9tpgF6UHVe99.webp"
     },
     {
       title: "工業與通訊",
       description: "工業與通訊領域對熱管理的要求最為嚴苛。伺服器機櫃、5G 基地台、工業電腦和大功率電源等設備需要在高溫、高濕、高塵環境下長期穩定運行。我們提供企業級的散熱解決方案，包括無風扇設計、液冷系統和模組化散熱器。這些方案不僅提高了設備的可靠性，還降低了運營成本和能耗。",
       items: ["伺服器機櫃散熱", "5G 基地台散熱", "工業電腦無風扇設計", "大功率電源散熱"],
-      image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663272903053/tjnjgZEBKycODNoc.png"
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/application-industrial-communication-7Z2anCshdttibH6uR34wSD.webp"
     },
     {
       title: "健康與生活",
       description: "遠紅外線技術在健康與生活領域展現出獨特的應用價值。我們開發的遠紅外線治療儀、智慧保暖衣物、健康寢具和節能建築材料，利用熱管理技術為人們帶來舒適與健康。通過精確控制溫度和熱分佈，這些產品能夠提供最佳的治療效果和用戶體驗。我們致力於將先進的熱技術轉化為改善生活品質的實際應用。",
       items: ["遠紅外線治療儀", "智慧保暖衣物", "健康寢具應用", "節能建築材料"],
-      image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663272903053/FzWTkwovuaaXduAq.png"
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/application-health-lifestyle-EPd2jgveoDD67KazxdNyJz.webp"
     },
     {
       title: "汽車與航空",
       description: "汽車與航空領域的熱管理需求涉及極端條件。電動車電池散熱、航空發動機冷卻系統、飛行器電子設備溫控等應用對可靠性和性能要求極高。我們提供針對性的解決方案，包括高效能散熱模組、先進的材料應用和創新的設計理念。這些方案幫助客戶實現更高的效率、更長的使用壽命和更優的安全性能。",
       items: ["電動車電池散熱", "航空發動機冷卻", "飛行器溫控系統", "汽車電子散熱"],
-      image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663272903053/AmuwytVpMPFqkdpy.png"
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/application-automotive-aerospace-GBvqcPRPaoi57Gb8TS4DPU.webp"
     }
   ];
 
