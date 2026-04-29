@@ -125,18 +125,18 @@ export default function About() {
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {[
-              { name: "Foxconn", logo: "/manus-storage/foxconn_4fa56b66.png" },
-              { name: "HP", logo: "/manus-storage/hp_bcfe3d3f.png" },
-              { name: "Audeo", logo: "/manus-storage/audeo_a27bf508.png" },
-              { name: "Arcadyan", logo: "/manus-storage/arcadyan_3db3c7a4.png" },
-              { name: "FIH Mobile", logo: "/manus-storage/fih-mobile_e382202e.jpg" },
-              { name: "Gigatek", logo: "/manus-storage/gigatek_7955aa75.jpg" },
-              { name: "AUO", logo: "/manus-storage/auo_52ce723f.webp" },
-              { name: "Kenmec", logo: "/manus-storage/kenmec_a2011930.png" },
-              { name: "NTU", logo: "/manus-storage/ntu_e33d8572.png" },
-              { name: "PCEE", logo: "/manus-storage/pcee_4c014cab.jpg" },
-              { name: "Mytek", logo: "/manus-storage/mytek_e3d07d03.png" },
-              { name: "Cruise", logo: "/manus-storage/cruise_bbb7754d.png" }
+              { name: "Foxconn", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/foxconn-logo-transparent-hxaGURFynnSAqphzQuQpbs.webp" },
+              { name: "HP", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/hp-logo-transparent-LVwhjfN3ZoB5tPQwh32vPi.webp" },
+              { name: "Audeo", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/audeo-logo-transparent-QSnP8aNfywz8dZiy8AUSB6.webp" },
+              { name: "Arcadyan", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/arcadyan-logo-transparent-jugbYcjoSxfqdz7SFDbkam.webp" },
+              { name: "FIH Mobile", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/fih-mobile-logo-transparent-AVoYXoJMs8ScjG4CSEYhB3.webp" },
+              { name: "Gigatek", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/gigatek-logo-transparent-mybhB9T5JSQfrJZMwhynSB.webp" },
+              { name: "AUO", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/auo-logo-transparent-aRwuPdZf53UBRSeHwLs8Po.webp" },
+              { name: "Kenmec", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/kenmec-logo-transparent-25462zwjPgQdYadXSuhi4H.webp" },
+              { name: "NTU", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/ntu-logo-transparent-Dxzq6MSSgii5Y9NyPX7JmM.webp" },
+              { name: "PCEE", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/pcee-logo-transparent-BXn9KdtCYZd7sMZMiti4TE.webp" },
+              { name: "Mytek", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/mytek-logo-transparent-a2UHZtFF8xo9KmtqwZ4qU9.webp" },
+              { name: "Cruise", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/cruise-logo-transparent-27mWY5CNnKGYEC5wgMNrCp.webp" }
             ].map((client, i) => (
               <div key={i} className="h-32 flex flex-col items-center justify-center border border-white/10 rounded-xl bg-card/50 hover:bg-card/80 hover:border-primary/50 transition-all cursor-default group shadow-lg hover:shadow-xl hover:-translate-y-1 overflow-hidden">
                 <img 
