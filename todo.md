@@ -263,3 +263,7 @@
 - [x] 添加標題、副標題和 CTA 按鈕
 - [x] 驗證新部分正確顯示
 - [x] 保存檢查點
+
+## 社群媒體連結
+- [x] 將頁腳中的 Facebook 圖標連接到 https://www.facebook.com/Therlect
+- [x] 驗證 Facebook 連接正確工作並開啟正確頁面

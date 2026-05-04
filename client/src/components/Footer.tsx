@@ -19,7 +19,7 @@ export default function Footer() {
             專注於熱管理與遠紅外線技術的創新解決方案，為全球客戶提供從理論分析到市場應用的全方位服務。
           </p>
           <div className="flex gap-4">
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><Facebook size={20} /></a>
+            <a href="https://www.facebook.com/Therlect" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors"><Facebook size={20} /></a>
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><Linkedin size={20} /></a>
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><Youtube size={20} /></a>
           </div>
