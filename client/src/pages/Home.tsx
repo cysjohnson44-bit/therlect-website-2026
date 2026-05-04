@@ -603,12 +603,27 @@ export default function Home() {
             <p className="text-muted-foreground">我們有幸與眾多國際知名企業合作，共同創造價值</p>
           </div>
           
-          <div className="flex justify-center items-center opacity-80 hover:opacity-100 transition-opacity">
-            <img 
-              src="/manus-storage/partners-logos-clean_f14a1951.png" 
-              alt="Partner Companies Logos" 
-              className="max-w-full h-auto drop-shadow-lg"
-            />
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
+            {/* Row 1 */}
+            <img src="/manus-storage/logo_6_9fdc8b75.png" alt="C&T" className="h-16 object-contain hover:scale-110 transition-transform" />
+            <img src="/manus-storage/logo_7_30ca2301.png" alt="TAILYN" className="h-16 object-contain hover:scale-110 transition-transform" />
+            <img src="/manus-storage/logo_8_9a2f1598.png" alt="NTIS" className="h-16 object-contain hover:scale-110 transition-transform" />
+            <img src="/manus-storage/logo_9_9ea776b4.png" alt="Google" className="h-16 object-contain hover:scale-110 transition-transform" />
+            <img src="/manus-storage/logo_10_03d6949e.png" alt="Meta" className="h-16 object-contain hover:scale-110 transition-transform" />
+            <img src="/manus-storage/logo_11_01ec8211.png" alt="MaxLinear" className="h-16 object-contain hover:scale-110 transition-transform" />
+            
+            {/* Row 2 */}
+            <img src="/manus-storage/logo_12_838d3d7f.png" alt="WinWay" className="h-16 object-contain hover:scale-110 transition-transform" />
+            <img src="/manus-storage/logo_13_d7923dd5.png" alt="Onyx" className="h-16 object-contain hover:scale-110 transition-transform" />
+            <img src="/manus-storage/logo_14_d006c804.png" alt="PanJit" className="h-16 object-contain hover:scale-110 transition-transform" />
+            <img src="/manus-storage/logo_15_ccbcdd43.png" alt="Broadcom" className="h-16 object-contain hover:scale-110 transition-transform" />
+            <img src="/manus-storage/logo_16_3c873a5c.png" alt="Marvell" className="h-16 object-contain hover:scale-110 transition-transform" />
+            <img src="/manus-storage/logo_17_284c2079.png" alt="FIH" className="h-16 object-contain hover:scale-110 transition-transform" />
+            
+            {/* Row 3 */}
+            <img src="/manus-storage/logo_18_2df50ed4.png" alt="KENMEC" className="h-16 object-contain hover:scale-110 transition-transform" />
+            <img src="/manus-storage/logo_19_3448cf4e.png" alt="MobileDrive" className="h-16 object-contain hover:scale-110 transition-transform" />
+            <img src="/manus-storage/logo_20_6714b3c4.png" alt="RapidTek" className="h-16 object-contain hover:scale-110 transition-transform" />
           </div>
         </div>
       </section>
