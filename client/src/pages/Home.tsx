@@ -350,7 +350,7 @@ export default function Home() {
               <div className="relative order-1 lg:order-2">
                 <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
                   <img 
-                    src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663272903053/tecxOEbjhRiEnnMy.png" 
+                    src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663272903053/XbNpKtOMlwAgKzVD.png" 
                     alt="Virtual Thermal Design" 
                     className="w-full h-auto hover:scale-105 transition-transform duration-500"
                   />
@@ -363,7 +363,7 @@ export default function Home() {
               <div className="relative">
                 <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
                   <img 
-                    src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663272903053/vZWlrVMJNCrTFeqe.png" 
+                    src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663272903053/gpzbycWUjnkyoXgv.png" 
                     alt="Thermal Verification Lab" 
                     className="w-full h-auto hover:scale-105 transition-transform duration-500"
                   />
@@ -414,7 +414,7 @@ export default function Home() {
               <div className="relative order-1 lg:order-2">
                 <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
                   <img 
-                    src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663272903053/DmHVzOKobuiglHso.png" 
+                    src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663272903053/WxmbAGfNwNtyrkJt.png" 
                     alt="Optimization Analysis" 
                     className="w-full h-auto hover:scale-105 transition-transform duration-500"
                   />
