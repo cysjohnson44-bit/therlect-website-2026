@@ -98,6 +98,19 @@ export default function Contact() {
 
                 <div className="flex items-start gap-4 p-6 rounded-xl bg-card/30 border border-white/5 hover:bg-card/50 transition-colors">
                   <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-1">
+                    <MapPin className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-2">台南辦公室</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      台南市新市區<br />
+                      中華路49號
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 p-6 rounded-xl bg-card/30 border border-white/5 hover:bg-card/50 transition-colors">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-1">
                     <Phone className="w-5 h-5 text-primary" />
                   </div>
                   <div>
@@ -187,15 +200,41 @@ export default function Contact() {
       </section>
 
       {/* Map Section */}
-      <section className="h-[400px] w-full relative grayscale hover:grayscale-0 transition-all duration-700">
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.467687926646!2d121.46966631500666!3d25.05212898396384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a870a133708f%3A0x6375628004216852!2zMjQx5paw5YyX5biC5LiJ6YeN5Y2A5YWJ5b6p6Lev5LiA5q61NjHlt7cyN-iZnw!5e0!3m2!1szh-TW!2stw!4v1645512345678!5m2!1szh-TW!2stw" 
-          width="100%" 
-          height="100%" 
-          style={{ border: 0 }} 
-          allowFullScreen 
-          loading="lazy"
-        />
+      <section className="py-20 bg-card/30 border-t border-white/5">
+        <div className="container">
+          <h2 className="font-display font-bold text-3xl mb-12 text-center">辦公室位置</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Taipei Office Map */}
+            <div>
+              <h3 className="font-bold text-xl mb-4">台北辦公室</h3>
+              <div className="h-[300px] w-full relative grayscale hover:grayscale-0 transition-all duration-700 rounded-xl overflow-hidden border border-white/5">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.467687926646!2d121.46966631500666!3d25.05212898396384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a870a133708f%3A0x6375628004216852!2zMjQx5paw5YyX5biC5LiJ6YeN5Y2A5YWJ5b6p6Lev5LiA5q61NjHlt7cyN-iZnw!5e0!3m2!1szh-TW!2stw!4v1645512345678!5m2!1szh-TW!2stw" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen 
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+            {/* Tainan Office Map */}
+            <div>
+              <h3 className="font-bold text-xl mb-4">台南辦公室</h3>
+              <div className="h-[300px] w-full relative grayscale hover:grayscale-0 transition-all duration-700 rounded-xl overflow-hidden border border-white/5">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3666.8742842843897!2d120.29333!3d22.88333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e8c5c5c5c5c5d%3A0x5c5c5c5c5c5c5c5c!2z5Y2X5riv5biC5Y2X5riv5biC5Y2X5riv5biC5Y2X5riv5biC5Y2X5riv5biC5Y2X5riv5biC!5e0!3m2!1szh-TW!2stw!4v1645512345678!5m2!1szh-TW!2stw" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen 
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <Footer />
