@@ -6,7 +6,15 @@ import path from "path";
 import { defineConfig } from "vite";
 import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
 
-const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime()];
+const plugins = [
+  react({
+    // 優化 React 快速刷新
+    jsxRuntime: 'automatic',
+  }),
+  tailwindcss(),
+  jsxLocPlugin(),
+  vitePluginManusRuntime(),
+];
 
 export default defineConfig({
   plugins,
@@ -23,6 +31,22 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
+    // 性能優化設置
+    minify: 'terser',
+    rollupOptions: {
+      output: {
+        // 代碼分割策略 - 將第三方庫分離
+        manualChunks: {
+          'vendor-react': ['react', 'react-dom'],
+          'vendor-trpc': ['@trpc/client', '@trpc/react-query', '@tanstack/react-query'],
+          'vendor-utils': ['date-fns', 'clsx'],
+        },
+      },
+    },
+    chunkSizeWarningLimit: 1000,
+    cssCodeSplit: true,
+    reportCompressedSize: true,
+    sourcemap: false,
   },
   server: {
     host: true,
@@ -39,5 +63,12 @@ export default defineConfig({
       strict: true,
       deny: ["**/.*"],
     },
+    // 開發服務器性能優化
+    cors: true,
+  },
+  // 優化依賴預構建
+  optimizeDeps: {
+    include: ['react', 'react-dom', '@trpc/client', '@tanstack/react-query'],
+    exclude: ['highlight.js'],
   },
 });
