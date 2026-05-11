@@ -1,5 +1,6 @@
 import { TRPCError } from "@trpc/server";
 import { ENV } from "./env";
+import { notifyOwner } from "./notification";
 
 export type EmailPayload = {
   to: string;
@@ -36,10 +37,15 @@ export async function sendEmail(payload: EmailPayload): Promise<boolean> {
     });
   }
 
-  const endpoint = new URL(
-    "webdevtoken.v1.WebDevService/SendEmail",
-    ENV.forgeApiUrl.endsWith("/") ? ENV.forgeApiUrl : `${ENV.forgeApiUrl}/`
-  ).toString();
+  // Build the correct email service endpoint
+  let endpoint = ENV.forgeApiUrl;
+  if (!endpoint.endsWith("/")) {
+    endpoint += "/";
+  }
+  endpoint += "webdevtoken.v1.WebDevService/SendEmail";
+  
+  // Log endpoint for debugging
+  console.log("[Email] Sending to endpoint:", endpoint);
 
   try {
     const response = await fetch(endpoint, {
@@ -65,12 +71,46 @@ export async function sendEmail(payload: EmailPayload): Promise<boolean> {
           detail ? `: ${detail}` : ""
         }`
       );
+      
+      // Fallback: Use notification system for admin emails
+      if (to === "jimmy.chen@therlect.com") {
+        console.log("[Email] Falling back to notification system for admin");
+        const plainText = textContent || htmlContent.replace(/<[^>]*>/g, "");
+        try {
+          await notifyOwner({
+            title: subject,
+            content: plainText.substring(0, 20000),
+          });
+          return true;
+        } catch (notifyError) {
+          console.warn("[Email] Notification fallback also failed:", notifyError);
+          return false;
+        }
+      }
+      
       return false;
     }
 
     return true;
   } catch (error) {
     console.warn("[Email] Error calling email service:", error);
+    
+    // Fallback: Use notification system for admin emails
+    if (to === "jimmy.chen@therlect.com") {
+      console.log("[Email] Falling back to notification system for admin");
+      const plainText = textContent || htmlContent.replace(/<[^>]*>/g, "");
+      try {
+        await notifyOwner({
+          title: subject,
+          content: plainText.substring(0, 20000),
+        });
+        return true;
+      } catch (notifyError) {
+        console.warn("[Email] Notification fallback also failed:", notifyError);
+        return false;
+      }
+    }
+    
     return false;
   }
 }
