@@ -132,35 +132,45 @@ export default function About() {
       </section>
 
       {/* Clients Logo Grid */}
-      <section className="py-24">
-        <div className="container">
+      <section className="py-24 relative overflow-hidden" style={{
+        backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/clients_background_grid-aHbK8dLqMnPxYzJwKvRsT2.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}>
+        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background/80" />
+        <div className="container relative z-10">
           <div className="text-center mb-16">
             <h2 className="font-display font-bold text-4xl md:text-5xl mb-4">我們的客戶</h2>
             <p className="text-muted-foreground text-lg">感謝這些優秀企業選擇汎海作為合作夥伴</p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {[
-              { name: "Foxconn", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/foxconn-logo-transparent-hxaGURFynnSAqphzQuQpbs.webp" },
-              { name: "HP", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/hp-logo-transparent-LVwhjfN3ZoB5tPQwh32vPi.webp" },
-              { name: "Audeo", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/audeo-logo-transparent-QSnP8aNfywz8dZiy8AUSB6.webp" },
-              { name: "Arcadyan", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/arcadyan-logo-transparent-jugbYcjoSxfqdz7SFDbkam.webp" },
-              { name: "FIH Mobile", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/fih-mobile-logo-transparent-AVoYXoJMs8ScjG4CSEYhB3.webp" },
-              { name: "Gigatek", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/gigatek-logo-transparent-mybhB9T5JSQfrJZMwhynSB.webp" },
-              { name: "AUO", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/auo-logo-transparent-aRwuPdZf53UBRSeHwLs8Po.webp" },
-              { name: "Kenmec", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/kenmec-logo-transparent-25462zwjPgQdYadXSuhi4H.webp" },
-              { name: "NTU", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/ntu-logo-transparent-Dxzq6MSSgii5Y9NyPX7JmM.webp" },
-              { name: "PCEE", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/pcee-logo-transparent-BXn9KdtCYZd7sMZMiti4TE.webp" },
-              { name: "Mytek", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/mytek-logo-transparent-a2UHZtFF8xo9KmtqwZ4qU9.webp" },
-              { name: "Cruise", logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/cruise-logo-transparent-27mWY5CNnKGYEC5wgMNrCp.webp" }
+              { name: "Foxconn", logo: "/manus-storage/0_MdlgAUJ6zzdMHbI29eVyc9_1778551196542_na1fn_L2hvbWUvdWJ1bnR1L2ZveGNvbm5fbG9nb190cmFuc3BhcmVudA_36bf9803.png" },
+              { name: "C&T", logo: "/manus-storage/1_oL6rPQtyXmxrsictHsmSYK_1778551285848_na1fn_L2hvbWUvdWJ1bnR1L0MmVF9sb2dvX3RyYW5zcGFyZW50_cdb64e9b.png" },
+              { name: "Tailyn", logo: "/manus-storage/2_vv0ZuuBlPV8jBh6gTeHd9U_1778551177634_na1fn_L2hvbWUvdWJ1bnR1L1RhaWx5bl9sb2dvX3RyYW5zcGFyZW50_064feacd.png" },
+              { name: "NTIS", logo: "/manus-storage/3_HoRSMn9wkopu6tnBN6quPv_1778551228069_na1fn_L2hvbWUvdWJ1bnR1L250aXNfbG9nb190cmFuc3BhcmVudA_d681239e.png" },
+              { name: "Google", logo: "/manus-storage/4_lU2PvXkOV1ELrGXJ2E9g0Z_1778551253423_na1fn_L2hvbWUvdWJ1bnR1L2dvb2dsZV9sb2dvX3RyYW5zcGFyZW50_a6eb4bd8.png" },
+              { name: "Meta", logo: "/manus-storage/5_Uq3zVTeD4sck8gOs6Y8pe0_1778551272838_na1fn_L2hvbWUvdWJ1bnR1L21ldGFfbG9nb190cmFuc3BhcmVudA_d1d4c01d.png" },
+              { name: "MaxLinear", logo: "/manus-storage/6_WbxLIH4CXEL6CSW5AUkrxF_1778551204471_na1fn_L2hvbWUvdWJ1bnR1L01heExpbmVhcl9sb2dvX3RyYW5zcGFyZW50_7453d7b4.png" },
+              { name: "WinWay", logo: "/manus-storage/7_xQipshHa6hrcqNC2zqdHYc_1778551179523_na1fn_L2hvbWUvdWJ1bnR1L3dpbndheV9sb2dvX3RyYW5zcGFyZW50_f3131aa7.png" },
+              { name: "Onyx", logo: "/manus-storage/8_I9GgCwUpJuJwxs1XD2UFDl_1778551277996_na1fn_L2hvbWUvdWJ1bnR1L29ueXhfbG9nb190cmFuc3BhcmVudA_6fead5e2.png" },
+              { name: "PAN", logo: "/manus-storage/9_eeBIgiKrtOwIFmxl3WEklB_1778551196409_na1fn_L2hvbWUvdWJ1bnR1L1BBTl9sb2dvX3RyYW5zcGFyZW50_a46247e0.png" },
+              { name: "Broadcom", logo: "/manus-storage/10_L3m61W3zzRtCTxhC2HTccF_1778551187115_na1fn_L2hvbWUvdWJ1bnR1L2Jyb2FkY29tX2xvZ29fdHJhbnNwYXJlbnQ_ae365e9c.png" },
+              { name: "Marvell", logo: "/manus-storage/11_eND1JI4zBHO7R8hMKPdfE5_1778551172897_na1fn_L2hvbWUvdWJ1bnR1L21hcnZlbGxfbG9nb190cmFuc3BhcmVudA_fb73d34d.png" },
+              { name: "FIH", logo: "/manus-storage/12_Z0doYTzAMJDxx1XTuRWLU4_1778551270916_na1fn_L2hvbWUvdWJ1bnR1L0ZJSF9sb2dvX3RyYW5zcGFyZW50_f4cb01da.png" },
+              { name: "Kenmec", logo: "/manus-storage/13_HnSiO7TgGYmEnNgNPacmP2_1778551199339_na1fn_L2hvbWUvdWJ1bnR1L0tlbm1lY19sb2dvX3RyYW5zcGFyZW50_bfc21f0d.png" },
+              { name: "MobiShow", logo: "/manus-storage/14_hh9RvbNSDXH5EQ0gShPd45_1778551184454_na1fn_L2hvbWUvdWJ1bnR1L01vYmlTaG93X3RyYW5zcGFyZW50_40955c09.png" },
+              { name: "RapidTek", logo: "/manus-storage/15_FDKX4ATZSlWStChnpYGmU2_1778551186541_na1fn_L2hvbWUvdWJ1bnR1L1JhcGlkVGVrX2xvZ29fdHJhbnNwYXJlbnQ_902cf733.png" },
+              { name: "Catapult", logo: "/manus-storage/16_1Rn6HZpH6sZ5uXbW6G8rJN_1778551181713_na1fn_L2hvbWUvdWJ1bnR1L2NhdGFwdWx0X2xvZ29fdHJhbnNwYXJlbnQ_fb4d0fe0.png" }
             ].map((client, i) => (
-              <div key={i} className="h-32 flex flex-col items-center justify-center border border-white/10 rounded-xl bg-card/50 hover:bg-card/80 hover:border-primary/50 transition-all cursor-default group shadow-lg hover:shadow-xl hover:-translate-y-1 overflow-hidden">
+              <div key={i} className="h-40 flex items-center justify-center border border-blue-400/30 rounded-lg bg-gradient-to-br from-blue-500/10 to-blue-600/5 hover:bg-gradient-to-br hover:from-blue-500/20 hover:to-blue-600/10 hover:border-blue-400/50 transition-all cursor-default group shadow-lg hover:shadow-xl hover:-translate-y-1 overflow-hidden backdrop-blur-sm">
                 <img 
                   src={client.logo} 
                   alt={client.name}
-                  className="w-20 h-20 object-contain mb-3 group-hover:scale-110 transition-transform"
+                  className="w-24 h-24 object-contain group-hover:scale-110 transition-transform drop-shadow-lg"
                 />
-                <span className="font-display font-semibold text-xs text-muted-foreground group-hover:text-foreground transition-colors text-center px-2">{client.name}</span>
               </div>
             ))}
           </div>
