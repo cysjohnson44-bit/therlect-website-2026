@@ -180,7 +180,7 @@ export default function Home() {
           
           {/* Logo Grid with Full Width */}
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 px-4">
               {/* Individual Logo Cards with Removed Backgrounds */}
               {[
                 { name: 'Partner 1', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663272903053/AgSbLcVyQnojDVCy.png' },
@@ -208,14 +208,14 @@ export default function Home() {
               ].map((logo, index) => (
                 <div
                   key={index}
-                  className="group relative bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 hover:border-white/40 hover:bg-white/15 transition-all duration-300 hover:shadow-lg hover:shadow-white/10"
+                  className="group relative flex items-center justify-center hover:opacity-80 transition-opacity duration-300"
                 >
                   {/* Logo Container */}
-                  <div className="relative h-24 flex items-center justify-center overflow-hidden">
+                  <div className="relative w-full h-32 flex items-center justify-center overflow-hidden">
                     <img
                       src={logo.url}
                       alt={logo.name}
-                      className="w-full h-full object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-md"
+                      className="w-full h-full object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300"
                     />
                   </div>
                 </div>
