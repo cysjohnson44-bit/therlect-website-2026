@@ -169,8 +169,9 @@ export default function Home() {
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
       }}>
-        {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/30" />
+        {/* Overlay for better text readability - Lighter overlay */}
+        <div className="absolute inset-0 bg-white/5" />
+        <div className="absolute inset-0 bg-blue/2" />
         
         <div className="container relative z-10 py-24">
           <div className="text-center mb-16">
@@ -180,7 +181,7 @@ export default function Home() {
           
           {/* Logo Grid with Full Width */}
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 px-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 px-4">
               {/* Individual Logo Cards with Removed Backgrounds */}
               {[
                 { name: 'Partner 1', url: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663272903053/AgSbLcVyQnojDVCy.png' },
@@ -210,8 +211,8 @@ export default function Home() {
                   key={index}
                   className="group relative flex items-center justify-center hover:opacity-80 transition-opacity duration-300"
                 >
-                  {/* Logo Container */}
-                  <div className="relative w-full h-32 flex items-center justify-center overflow-hidden">
+                  {/* Logo Container - Enlarged 40% */}
+                  <div className="relative w-full h-44 flex items-center justify-center overflow-hidden">
                     <img
                       src={logo.url}
                       alt={logo.name}
