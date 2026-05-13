@@ -169,9 +169,9 @@ export default function Home() {
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
       }}>
-        {/* Overlay for better text readability - Lighter overlay */}
-        <div className="absolute inset-0 bg-white/5" />
-        <div className="absolute inset-0 bg-blue/2" />
+        {/* Overlay for better text readability - Much Lighter overlay (微淺藍色) */}
+        <div className="absolute inset-0 bg-white/20" />
+        <div className="absolute inset-0 bg-blue/1" />
         
         <div className="container relative z-10 py-24">
           <div className="text-center mb-16">
@@ -211,8 +211,8 @@ export default function Home() {
                   key={index}
                   className="group relative flex items-center justify-center hover:opacity-80 transition-opacity duration-300"
                 >
-                  {/* Logo Container - Further Enlarged to 56 */}
-                  <div className="relative w-full h-56 flex items-center justify-center overflow-hidden">
+                  {/* Logo Container - Further Enlarged by 40% to 78 */}
+                  <div className="relative w-full h-80 flex items-center justify-center overflow-hidden">
                     <img
                       src={logo.url}
                       alt={logo.name}
