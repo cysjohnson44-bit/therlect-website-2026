@@ -33,6 +33,11 @@ export default defineConfig({
     emptyOutDir: true,
     // 性能優化設置
     minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+      },
+    },
     rollupOptions: {
       output: {
         // 代碼分割策略 - 將第三方庫分離

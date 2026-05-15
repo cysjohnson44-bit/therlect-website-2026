@@ -24,6 +24,8 @@ export default function Home() {
             src="/assets/background_1.jpg" 
             alt="Therlect Technology Background" 
             className="w-full h-full object-cover opacity-40"
+            loading="eager"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
           <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10" />
@@ -70,6 +72,8 @@ export default function Home() {
                 src="/assets/thermal_analysis.jpg" 
                 alt="Thermal Analysis Visualization" 
                 className="relative z-10 w-full h-full object-contain drop-shadow-[0_0_50px_rgba(0,240,255,0.3)] rounded-2xl border border-white/10"
+                loading="lazy"
+                decoding="async"
               />
               
               {/* Floating Data Cards */}
@@ -217,6 +221,8 @@ export default function Home() {
                       src={logo.url}
                       alt={logo.name}
                       className="w-full h-full object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 </div>
@@ -233,6 +239,8 @@ export default function Home() {
             src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663272903053/eSjbAICDHCXTVOZs.jpg" 
             alt="Partnership" 
             className="w-full h-full object-cover opacity-20"
+            loading="lazy"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/50" />
         </div>
