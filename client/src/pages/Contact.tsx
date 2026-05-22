@@ -36,7 +36,7 @@ export default function Contact() {
       
       if (response.ok) {
         setIsSubmitting(false);
-        toast.success("訊息已發送！我們會在 24 小時內與您聯繫。");
+        toast.success("訊息已發送！");
         (e.target as HTMLFormElement).reset();
       } else {
         setIsSubmitting(false);

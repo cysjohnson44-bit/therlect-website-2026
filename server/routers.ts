@@ -114,7 +114,7 @@ export const appRouter = router({
 
         return {
           success: true,
-          message: "訊息已發送，我們將在 24 小時內與您聯繫。",
+          message: "訊息已發送",
         };
       }),
   }),
