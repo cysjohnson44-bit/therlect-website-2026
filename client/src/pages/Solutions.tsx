@@ -159,7 +159,7 @@ export default function Solutions() {
           <div className="text-center mb-20">
             <h2 className="font-display font-bold text-4xl mb-4">多元應用領域</h2>
             <p className="text-muted-foreground text-lg mb-4">我們的分析經驗涵蓋高發熱量與精密電子領域</p>
-            <p className="text-muted-foreground text-base max-w-3xl mx-auto leading-relaxed">Therlect 汎海科技擁有超過十五年的熱管理經驗，在消費性電子、工業通訊、健康與生活、汽車與航空等多個領域積累了豐富的技術知識與成功案例。我們的解決方案已廣泛應用於全球知名企業，幫助他們解決複雜的熱管理挑戰，提升產品性能與市場競爭力。</p>
+            <p className="text-muted-foreground text-base max-w-3xl mx-auto leading-relaxed">Therlect 汎海科技擁有超過7年的熱管理經驗，在消費性電子、工業通訊、健康與生活、汽車與航空等多個領域積累了豐富的技術知識與成功案例。我們的解決方案已廣泛應用於全球知名企業，幫助他們解決複雜的熱管理挑戰，提升產品性能與市場競爭力。</p>
           </div>
 
           <div className="space-y-24">
