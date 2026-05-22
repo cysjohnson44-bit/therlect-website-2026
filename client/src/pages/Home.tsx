@@ -174,16 +174,17 @@ export default function Home() {
             <p className="text-muted-foreground text-lg">與全球領先企業合作，提供頂級熱管理解決方案</p>
           </div>
           
-          {/* Logo placeholder - waiting for image upload */}
-          <div
-            className="w-full bg-white/5 border border-dashed border-primary/30 rounded-lg flex items-center justify-center"
+          {/* Partner Logos Image - High Resolution Display */}
+          <img
+            src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663272903053/TqtrNodBmLPSmMUO.png"
+            alt="Trusted Partners Logos"
+            className="w-full rounded-lg object-contain"
             style={{
               aspectRatio: '4 / 3',
-              minHeight: '300px',
+              minHeight: '500px',
+              imageRendering: 'crisp-edges',
             }}
-          >
-            <p className="text-muted-foreground text-lg">合作夥伴商標區域（待上傳）</p>
-          </div>
+          />
         </div>
       </section>
 
