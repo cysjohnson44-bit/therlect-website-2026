@@ -176,7 +176,7 @@ export default function Home() {
           
           {/* Partner Logos Image - High Resolution Display */}
           <img
-            src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663272903053/lGZyFfstiVWvQurp.jpg"
+            src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663272903053/SbOLJZtQLsSpCvcm.png"
             alt="Trusted Partners Logos"
             className="w-full rounded-lg object-contain"
             style={{
