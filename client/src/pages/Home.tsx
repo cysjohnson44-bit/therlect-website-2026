@@ -17,7 +17,7 @@ export default function Home() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+      <section className="relative min-h-auto flex flex-col items-center justify-center pt-32 pb-24 overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
@@ -31,7 +31,8 @@ export default function Home() {
           <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10" />
         </div>
 
-        <div className="container relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        {/* Main Hero Content */}
+        <div className="container relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
           <div className="space-y-8 animate-in slide-in-from-left-10 duration-1000 fade-in">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 backdrop-blur-sm">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
@@ -99,6 +100,33 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        {/* Statistics Section - DigitalOcean Style */}
+        <div className="container relative z-10 w-full">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="group relative bg-white/5 backdrop-blur-sm border border-primary/30 rounded-lg p-8 hover:border-primary/60 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
+              <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-cyan-500/0 via-blue-500/0 to-purple-500/0 group-hover:from-cyan-500/10 group-hover:via-blue-500/10 group-hover:to-purple-500/10 transition-all duration-300" />
+              <div className="relative text-center">
+                <p className="text-4xl md:text-5xl font-bold text-primary mb-2">7+</p>
+                <p className="text-sm text-muted-foreground">年專業經驗</p>
+              </div>
+            </div>
+            <div className="group relative bg-white/5 backdrop-blur-sm border border-primary/30 rounded-lg p-8 hover:border-primary/60 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
+              <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-cyan-500/0 via-blue-500/0 to-purple-500/0 group-hover:from-cyan-500/10 group-hover:via-blue-500/10 group-hover:to-purple-500/10 transition-all duration-300" />
+              <div className="relative text-center">
+                <p className="text-4xl md:text-5xl font-bold text-primary mb-2">100+</p>
+                <p className="text-sm text-muted-foreground">全球客戶</p>
+              </div>
+            </div>
+            <div className="group relative bg-white/5 backdrop-blur-sm border border-primary/30 rounded-lg p-8 hover:border-primary/60 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
+              <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-cyan-500/0 via-blue-500/0 to-purple-500/0 group-hover:from-cyan-500/10 group-hover:via-blue-500/10 group-hover:to-purple-500/10 transition-all duration-300" />
+              <div className="relative text-center">
+                <p className="text-4xl md:text-5xl font-bold text-primary mb-2">50+</p>
+                <p className="text-sm text-muted-foreground">成功項目</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Solutions Section */}
@@ -144,10 +172,13 @@ export default function Home() {
             ].map((solution, index) => (
               <div
                 key={index}
-                className="group relative bg-white/5 backdrop-blur-sm border border-primary/30 rounded-lg p-8 hover:border-primary/60 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20"
+                className="group relative bg-white/5 backdrop-blur-sm border border-primary/30 rounded-lg p-8 hover:border-primary/60 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 overflow-hidden"
               >
                 {/* Gradient Border Effect */}
                 <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-cyan-500/0 via-blue-500/0 to-purple-500/0 group-hover:from-cyan-500/10 group-hover:via-blue-500/10 group-hover:to-purple-500/10 transition-all duration-300" />
+                
+                {/* Top Border Accent */}
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 
                 {/* Content */}
                 <div className="relative">
@@ -157,9 +188,6 @@ export default function Home() {
                   <h3 className="font-semibold text-lg mb-2 text-white">{solution.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{solution.description}</p>
                 </div>
-
-                {/* Top Border Accent */}
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-t-lg" />
               </div>
             ))}
           </div>
@@ -169,22 +197,24 @@ export default function Home() {
       {/* Trusted Partners Section */}
       <section className="py-24 relative overflow-hidden bg-background">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="font-display font-bold text-4xl mb-4 text-white">值得信賴的合作夥伴</h2>
+          <div className="text-center mb-20">
+            <h2 className="font-display font-bold text-4xl md:text-5xl mb-4 text-white">值得信賴的合作夥伴</h2>
             <p className="text-muted-foreground text-lg">與全球領先企業合作，提供頂級熱管理解決方案</p>
           </div>
           
           {/* Partner Logos Image - High Resolution Display */}
-          <img
-            src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663272903053/SbOLJZtQLsSpCvcm.png"
-            alt="Trusted Partners Logos"
-            className="w-full rounded-lg object-contain"
-            style={{
-              aspectRatio: '4 / 3',
-              minHeight: '500px',
-              imageRendering: 'crisp-edges',
-            }}
-          />
+          <div className="relative group rounded-lg overflow-hidden border border-primary/30 hover:border-primary/60 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
+            <img
+              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663272903053/SbOLJZtQLsSpCvcm.png"
+              alt="Trusted Partners Logos"
+              className="w-full object-contain"
+              style={{
+                aspectRatio: '4 / 3',
+                minHeight: '500px',
+                imageRendering: 'crisp-edges',
+              }}
+            />
+          </div>
         </div>
       </section>
 
@@ -203,10 +233,14 @@ export default function Home() {
         
         <div className="container relative z-10">
           <div className="max-w-3xl">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 backdrop-blur-sm mb-6">
+              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+              <span className="text-xs font-mono text-primary tracking-wider">準備開始</span>
+            </div>
             <h2 className="font-display font-bold text-4xl md:text-5xl mb-6 text-white">
               準備好解決您的熱管理挑戰？
             </h2>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
               我們的專家團隊隨時準備為您的項目提供定制化的解決方案。無論您的需求有多複雜，我們都能找到最適合的方案。
             </p>
             <Link href="/contact">
