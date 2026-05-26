@@ -88,6 +88,27 @@ export const appRouter = router({
         message: z.string().min(1),
       }))
       .mutation(async ({ input }) => {
+        const { createEmailConversation, saveEmailMessage } = await import("./db");
+        
+        // Create email conversation
+        const conversation = await createEmailConversation({
+          visitorEmail: input.email,
+          visitorName: input.name,
+          subject: input.subject,
+          status: "open",
+        });
+
+        // Save customer message
+        await saveEmailMessage({
+          conversationId: conversation.id,
+          sender: "customer",
+          senderEmail: input.email,
+          senderName: input.name,
+          subject: input.subject,
+          message: input.message,
+          isRead: 0,
+        });
+
         // Send confirmation email to user
         await sendEmail({
           to: input.email,
@@ -296,6 +317,66 @@ Therlect 汎海科技的核心服務包括：
               <p><strong>來自：</strong> ${input.senderName} (${input.senderEmail})</p>
               <p><strong>訊息：</strong></p>
               <p>${input.message.replace(/\n/g, '<br>')}</p>
+            `,
+          });
+        }
+
+        return { success: true, messageId: savedMessage.id };
+      }),
+  }),
+
+  // Messages management routes (for admin panel)
+  messages: router({
+    getConversations: publicProcedure
+      .input(z.object({
+        limit: z.number().default(50),
+        offset: z.number().default(0),
+      }))
+      .query(async ({ input }) => {
+        return getEmailConversations(input.limit, input.offset);
+      }),
+
+    getMessages: publicProcedure
+      .input(z.object({
+        conversationId: z.number(),
+      }))
+      .query(async ({ input }) => {
+        return getEmailMessages(input.conversationId);
+      }),
+
+    sendReply: publicProcedure
+      .input(z.object({
+        conversationId: z.number(),
+        message: z.string().min(1),
+      }))
+      .mutation(async ({ input }) => {
+        // Save admin reply
+        const savedMessage = await saveEmailMessage({
+          conversationId: input.conversationId,
+          sender: "admin",
+          senderEmail: "jimmy.chen@therlect.com",
+          senderName: "Therlect 客服團隊",
+          message: input.message,
+          isRead: 1,
+        });
+
+        // Update conversation status to replied
+        await updateEmailConversationStatus(input.conversationId, "replied");
+
+        // Get conversation details to send email
+        const conversation = await getEmailConversationById(input.conversationId);
+        if (conversation) {
+          await sendEmail({
+            to: conversation.visitorEmail,
+            subject: `回覆：${conversation.subject}`,
+            htmlContent: `
+              <h2>感謝您的詢問</h2>
+              <p>親愛的 ${conversation.visitorName}，</p>
+              <p>我們已收到您的訊息，以下是我們的回覆：</p>
+              <p>${input.message.replace(/\n/g, '<br>')}</p>
+              <p>如有任何進一步的問題，歡迎隨時與我們聯繫。</p>
+              <p>謝謝！</p>
+              <p>Therlect 汎海科技客服團隊</p>
             `,
           });
         }
