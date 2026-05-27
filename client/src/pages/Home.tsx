@@ -195,16 +195,24 @@ export default function Home() {
       </section>
 
       {/* Trusted Partners Section */}
-      <section className="relative overflow-hidden bg-background">
+      <section className="relative overflow-hidden bg-background py-20">
+        <div className="container mb-12">
+          <h2 className="font-display font-bold text-4xl md:text-5xl mb-4 text-white text-center">值得信賴的合作夥伴</h2>
+          <p className="text-muted-foreground text-lg text-center">與全球領先企業合作，提供頂級熱管理解決方案</p>
+        </div>
+        
         {/* Full-width partner logos background with hover zoom effect */}
-        <div className="w-full overflow-hidden">
+        <div className="w-full overflow-hidden bg-slate-900" style={{ minHeight: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <img
-            src="/manus-storage/partner-logos_65eefeb8.png"
+            src="/manus-storage/partner-logos_c3b5f353.png"
             alt="Trusted Partners Logos"
-            className="w-full h-auto object-cover transition-transform duration-500 ease-out hover:scale-105"
+            className="w-full transition-transform duration-500 ease-out hover:scale-105"
             style={{
               imageRendering: 'crisp-edges',
               display: 'block',
+              height: 'auto',
+              maxHeight: '400px',
+              objectFit: 'contain',
             }}
           />
         </div>
