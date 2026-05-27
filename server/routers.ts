@@ -329,14 +329,65 @@ Therlect 汎海科技的核心服務包括：
       }),
   }),
 
-  // Messages management routes (for admin panel)
-  messages: router({
+  // Admin panel routes (password protected)
+  admin: router({
+    login: publicProcedure
+      .input(z.object({
+        password: z.string().min(1),
+      }))
+      .mutation(async ({ input, ctx }) => {
+        const adminPassword = process.env.ADMIN_PASSWORD || "therlect2026";
+        
+        if (input.password !== adminPassword) {
+          return { success: false, message: "密碼錯誤" };
+        }
+
+        // Set admin session cookie
+        const cookieOptions = getSessionCookieOptions(ctx.req);
+        ctx.res.cookie("admin_session", "authenticated", {
+          ...cookieOptions,
+          maxAge: 24 * 60 * 60 * 1000, // 24 hours
+        });
+
+        return { success: true, message: "登入成功" };
+      }),
+
+    logout: publicProcedure
+      .mutation(({ ctx }) => {
+        const cookieOptions = getSessionCookieOptions(ctx.req);
+        ctx.res.clearCookie("admin_session", { ...cookieOptions, maxAge: -1 });
+        return { success: true };
+      }),
+
+    isAuthenticated: publicProcedure
+      .query(({ ctx }) => {
+        const adminCookie = ctx.req.cookies["admin_session"];
+        return { authenticated: adminCookie === "authenticated" };
+      }),
+
+    getBookings: publicProcedure
+      .input(z.object({
+        limit: z.number().default(50),
+        offset: z.number().default(0),
+      }))
+      .query(async ({ input, ctx }) => {
+        const adminCookie = ctx.req.cookies["admin_session"];
+        if (adminCookie !== "authenticated") {
+          throw new Error("未授權");
+        }
+        return getBookings(input.limit, input.offset);
+      }),
+
     getConversations: publicProcedure
       .input(z.object({
         limit: z.number().default(50),
         offset: z.number().default(0),
       }))
-      .query(async ({ input }) => {
+      .query(async ({ input, ctx }) => {
+        const adminCookie = ctx.req.cookies["admin_session"];
+        if (adminCookie !== "authenticated") {
+          throw new Error("未授權");
+        }
         return getEmailConversations(input.limit, input.offset);
       }),
 
@@ -344,48 +395,12 @@ Therlect 汎海科技的核心服務包括：
       .input(z.object({
         conversationId: z.number(),
       }))
-      .query(async ({ input }) => {
-        return getEmailMessages(input.conversationId);
-      }),
-
-    sendReply: publicProcedure
-      .input(z.object({
-        conversationId: z.number(),
-        message: z.string().min(1),
-      }))
-      .mutation(async ({ input }) => {
-        // Save admin reply
-        const savedMessage = await saveEmailMessage({
-          conversationId: input.conversationId,
-          sender: "admin",
-          senderEmail: "jimmy.chen@therlect.com",
-          senderName: "Therlect 客服團隊",
-          message: input.message,
-          isRead: 1,
-        });
-
-        // Update conversation status to replied
-        await updateEmailConversationStatus(input.conversationId, "replied");
-
-        // Get conversation details to send email
-        const conversation = await getEmailConversationById(input.conversationId);
-        if (conversation) {
-          await sendEmail({
-            to: conversation.visitorEmail,
-            subject: `回覆：${conversation.subject}`,
-            htmlContent: `
-              <h2>感謝您的詢問</h2>
-              <p>親愛的 ${conversation.visitorName}，</p>
-              <p>我們已收到您的訊息，以下是我們的回覆：</p>
-              <p>${input.message.replace(/\n/g, '<br>')}</p>
-              <p>如有任何進一步的問題，歡迎隨時與我們聯繫。</p>
-              <p>謝謝！</p>
-              <p>Therlect 汎海科技客服團隊</p>
-            `,
-          });
+      .query(async ({ input, ctx }) => {
+        const adminCookie = ctx.req.cookies["admin_session"];
+        if (adminCookie !== "authenticated") {
+          throw new Error("未授權");
         }
-
-        return { success: true, messageId: savedMessage.id };
+        return getEmailMessages(input.conversationId);
       }),
   }),
 });
