@@ -196,12 +196,12 @@ export default function Home() {
 
       {/* Trusted Partners Section */}
       <section className="relative overflow-hidden bg-background">
-        {/* Full-width partner logos background */}
-        <div className="w-full">
+        {/* Full-width partner logos background with hover zoom effect */}
+        <div className="w-full overflow-hidden">
           <img
             src="/manus-storage/partner-logos_65eefeb8.png"
             alt="Trusted Partners Logos"
-            className="w-full h-auto object-cover"
+            className="w-full h-auto object-cover transition-transform duration-500 ease-out hover:scale-105"
             style={{
               imageRendering: 'crisp-edges',
               display: 'block',
