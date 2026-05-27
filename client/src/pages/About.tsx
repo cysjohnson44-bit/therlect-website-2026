@@ -58,7 +58,7 @@ export default function About() {
             <div className="w-full md:w-1/2 space-y-6">
               <h2 className="font-display font-bold text-3xl md:text-4xl">我們的故事</h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Therlect 汗海科技成立於 2019 年，由一群資深熱流工程師所創立。我們深信，熱管理不僅是一門科學，更是一門藝術。
+                Therlect 汎海科技成立於 2019 年，由一群資深熱流工程師所創立。我們深信，熱管理不僅是一門科學，更是一門藝術。
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 在過去的7年裡，我們見證了電子產品效能的快速發展，也解決了隨之而來的散熱挑戰。從早期的被動散熱到現在的主動式液冷與相變技術，我們始終走在技術的最前沿。
