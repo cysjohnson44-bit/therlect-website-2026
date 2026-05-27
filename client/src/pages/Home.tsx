@@ -195,23 +195,24 @@ export default function Home() {
       </section>
 
       {/* Trusted Partners Section */}
-      <section className="relative overflow-hidden bg-background py-20">
-        <div className="container mb-12">
+      <section className="relative overflow-hidden" style={{ backgroundColor: '#0f1729' }}>
+        <div className="container py-12 mb-0">
           <h2 className="font-display font-bold text-4xl md:text-5xl mb-4 text-white text-center">值得信賴的合作夥伴</h2>
-          <p className="text-muted-foreground text-lg text-center">與全球領先企業合作，提供頂級熱管理解決方案</p>
+          <p className="text-gray-300 text-lg text-center">與全球領先企業合作，提供頂級熱管理解決方案</p>
         </div>
         
         {/* Full-width partner logos background with hover zoom effect */}
-        <div className="w-full overflow-hidden bg-slate-900" style={{ minHeight: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div className="w-full overflow-hidden" style={{ backgroundColor: '#0f1729', minHeight: '450px', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '40px 20px' }}>
           <img
-            src="/manus-storage/partner-logos_c3b5f353.png"
+            src="/manus-storage/partner-logos-new_9930f1eb.png"
             alt="Trusted Partners Logos"
-            className="w-full transition-transform duration-500 ease-out hover:scale-105"
+            className="transition-transform duration-500 ease-out hover:scale-105"
             style={{
               imageRendering: 'crisp-edges',
               display: 'block',
+              width: '100%',
               height: 'auto',
-              maxHeight: '400px',
+              maxWidth: '100%',
               objectFit: 'contain',
             }}
           />
