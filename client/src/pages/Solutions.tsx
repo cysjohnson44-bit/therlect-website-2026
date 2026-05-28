@@ -83,12 +83,7 @@ export default function Solutions() {
       items: ["伺服器機櫃散熱", "5G 基地台散熱", "工業電腦無風扇設計", "大功率電源散熱"],
       image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/application-industrial-communication-7Z2anCshdttibH6uR34wSD.webp"
     },
-    {
-      title: "健康與生活",
-      description: "遠紅外線技術在健康與生活領域展現出獨特的應用價值。我們開發的遠紅外線治療儀、智慧保暖衣物、健康寢具和節能建築材料，利用熱管理技術為人們帶來舒適與健康。通過精確控制溫度和熱分佈，這些產品能夠提供最佳的治療效果和用戶體驗。我們致力於將先進的熱技術轉化為改善生活品質的實際應用。",
-      items: ["遠紅外線治療儀", "智慧保暖衣物", "健康寢具應用", "節能建築材料"],
-      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/application-health-lifestyle-EPd2jgveoDD67KazxdNyJz.webp"
-    },
+
     {
       title: "汽車與航空",
       description: "汽車與航空領域的熱管理需求涉及極端條件。電動車電池散熱、航空發動機冷卻系統、飛行器電子設備溫控等應用對可靠性和性能要求極高。我們提供針對性的解決方案，包括高效能散熱模組、先進的材料應用和創新的設計理念。這些方案幫助客戶實現更高的效率、更長的使用壽命和更優的安全性能。",
