@@ -26,6 +26,7 @@ export default function Home() {
             className="w-full h-full object-cover opacity-40"
             loading="lazy"
             decoding="async"
+            fetchPriority="low"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
           <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10" />
@@ -75,7 +76,7 @@ export default function Home() {
                 className="relative z-10 w-full h-full object-contain drop-shadow-[0_0_50px_rgba(0,240,255,0.3)] rounded-2xl border border-white/10"
                 loading="lazy"
                 decoding="async"
-                style={{ opacity: 0.7, contentVisibility: 'auto' }}
+                style={{ opacity: 0.7, contentVisibility: 'auto', willChange: 'opacity' }}
               />
               
               {/* Floating Data Cards */}

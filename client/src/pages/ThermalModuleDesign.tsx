@@ -129,7 +129,7 @@ export default function ThermalModuleDesign() {
                 src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663272903053/FcttGesqhzGlYqqY.jpg"
                 alt="高效能散熱模組設計"
                 className="relative z-10 w-full h-full object-contain drop-shadow-[0_0_50px_rgba(0,240,255,0.3)] rounded-2xl border border-white/10"
-              />
+              loading="lazy" decoding="async" />
             </div>
           </div>
         </div>
@@ -164,7 +164,7 @@ export default function ThermalModuleDesign() {
                       src={module.image}
                       alt={module.title}
                       className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
+                    loading="lazy" decoding="async" />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
 
@@ -368,7 +368,7 @@ export default function ThermalModuleDesign() {
                 src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663272903053/rvzHrwSXLQkRaKxO.jpg"
                 alt="FOXCONN"
                 className="max-h-16 max-w-full object-contain"
-              />
+              loading="lazy" decoding="async" />
             </div>
             {/* Other Industries */}
             {[

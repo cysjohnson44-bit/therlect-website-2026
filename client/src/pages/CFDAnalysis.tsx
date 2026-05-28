@@ -89,7 +89,7 @@ export default function CFDAnalysis() {
                 src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663272903053/DlTAnllrDsxXproZ.jpg"
                 alt="CFD 熱流分析可視化"
                 className="relative z-10 w-full h-full object-contain drop-shadow-[0_0_50px_rgba(0,240,255,0.3)] rounded-2xl border border-white/10"
-              />
+              loading="lazy" decoding="async" />
             </div>
           </div>
         </div>
@@ -145,7 +145,7 @@ export default function CFDAnalysis() {
             src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663272903053/ZCnqXtkKHPtJvXfJ.jpg"
             alt="散熱片應用"
             className="w-full h-full object-cover opacity-20"
-          />
+          loading="lazy" decoding="async" />
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background" />
         </div>
 
@@ -232,7 +232,7 @@ export default function CFDAnalysis() {
                   src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663272903053/JwluzuxbkzvhpLvB.jpg"
                   alt="熱管散熱應用"
                   className="relative z-10 w-full h-full object-contain drop-shadow-[0_0_50px_rgba(0,240,255,0.3)] rounded-2xl border border-white/10"
-                />
+                loading="lazy" decoding="async" />
               </div>
             </div>
 

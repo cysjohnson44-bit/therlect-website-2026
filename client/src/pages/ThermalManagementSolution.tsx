@@ -67,7 +67,7 @@ export default function ThermalManagementSolution() {
                 src="https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/thermal-solution-overview-aHDkSumMgiJ9Hps5Zpzokp.webp"
                 alt="熱管理解決方案"
                 className="relative z-10 w-full rounded-2xl border border-primary/30 shadow-2xl"
-              />
+              loading="lazy" decoding="async" />
             </div>
           </div>
         </div>
@@ -184,7 +184,7 @@ export default function ThermalManagementSolution() {
                       src={process.image}
                       alt={process.title}
                       className="w-full h-auto rounded-2xl"
-                    />
+                    loading="lazy" decoding="async" />
                   </div>
                 </div>
               </div>
@@ -256,7 +256,7 @@ export default function ThermalManagementSolution() {
                     src={app.image}
                     alt={app.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
+                  loading="lazy" decoding="async" />
                 </div>
                 <div className="p-6 space-y-4">
                   <div className="w-12 h-12 rounded-lg bg-primary/20 border border-primary/30 flex items-center justify-center group-hover:border-primary/50 transition-all">

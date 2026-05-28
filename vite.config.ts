@@ -36,7 +36,9 @@ export default defineConfig({
     terserOptions: {
       compress: {
         drop_console: true,
+        drop_debugger: true,
       },
+      mangle: true,
     },
     rollupOptions: {
       output: {
@@ -48,7 +50,8 @@ export default defineConfig({
         },
       },
     },
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 500,
+    assetsInlineLimit: 4096,
     cssCodeSplit: true,
     reportCompressedSize: true,
     sourcemap: false,

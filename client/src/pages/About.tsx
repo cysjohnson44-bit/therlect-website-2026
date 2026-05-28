@@ -36,7 +36,7 @@ export default function About() {
                   src="https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/therlect_team_research-8qedcTBkV5kL8w2eHjnHq3.webp" 
                   alt="Therlect Team" 
                   className="w-full h-full object-cover"
-                />
+                loading="lazy" decoding="async" />
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-overlay" />
               </div>
               {/* Stats Card */}

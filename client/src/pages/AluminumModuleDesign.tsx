@@ -144,7 +144,7 @@ export default function AluminumModuleDesign() {
                 src="https://private-us-east-1.manuscdn.com/sessionFile/aWh25CCAzOEVEA23UVSeIs/sandbox/x74W8yGhLIm4swOilNjPYT-img-1_1771158973000_na1fn_YWx1bWludW0tbW9kdWxlLXByZWNpc2lvbi1kZXNpZ24.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvYVdoMjVDQ0F6T0VWRUEyM1VWU2VJcy9zYW5kYm94L3g3NFc4eUdoTEltNHN3T2lsTmpQWVQtaW1nLTFfMTc3MTE1ODk3MzAwMF9uYTFmbl9ZV3gxYldsdWRXMHRiVzlrZFd4bExYQnlaV05wYzJsdmJpMWtaWE5wWjI0LnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=FmjvuVMGV-sZ5uK~c7vjFV0gJobxqXwtERwX2uaUHxM-WnhrKbQda0t0G4-14JIL8mpeeRkx71RAXjF3deoDL-1tSPQGKaHn1reXPw2CPEEEmEx9INu0bIljvV8IfN5PinVJu-sSIoB96EiBQGHQbqgLR22KYXRX3ZtdexemZrbRRu26zXYzWrqYAa-5Vllcr7tkdKFD61G6qY58xpI9heeDHwsXttAqXgaXw~R7rAMOjA4fXsRPKNUSBz6Q1WsLs93-Ss61a1miWbjSFePb-LBiKpiCgZkGwetJaCk-F014gDUiyzynDvor0iOlNMy7Z0z0O8CYvYB3f6voxkC6aw__" 
                 alt="鋁合金模組設計" 
                 className="relative z-10 w-full h-full object-contain drop-shadow-[0_0_50px_rgba(0,240,255,0.3)] rounded-2xl border border-white/10"
-              />
+              loading="lazy" decoding="async" />
             </div>
           </div>
         </div>
@@ -259,7 +259,7 @@ export default function AluminumModuleDesign() {
                     src={module.image} 
                     alt={module.title}
                     className="relative z-10 w-full h-auto rounded-2xl border border-white/10 group-hover:border-primary/50 transition-all duration-500 shadow-2xl group-hover:shadow-[0_0_40px_rgba(0,240,255,0.3)]"
-                  />
+                  loading="lazy" decoding="async" />
                 </div>
 
                 {/* Content */}

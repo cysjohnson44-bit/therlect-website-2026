@@ -148,6 +148,9 @@ export default function Solutions() {
                           src={step.image} 
                           alt={step.title}
                           className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+                          loading="lazy"
+                          decoding="async"
+                          style={{ contentVisibility: 'auto' }}
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       </div>
@@ -200,6 +203,7 @@ export default function Solutions() {
                       className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
                       loading="lazy"
                       decoding="async"
+                      style={{ contentVisibility: 'auto' }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   </div>

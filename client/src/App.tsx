@@ -2,25 +2,38 @@ import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
+import { Suspense, lazy } from "react";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
-import Technology from "./pages/Technology";
-import Solutions from "./pages/Solutions";
-import CFDAnalysis from "./pages/CFDAnalysis";
-import ThermalModuleDesign from "./pages/ThermalModuleDesign";
-import AluminumModuleDesign from "./pages/AluminumModuleDesign";
-import ThermalManagementSolution from "./pages/ThermalManagementSolution";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import EmailMessaging from "./pages/EmailMessaging";
-import AdminEmailDashboard from "./pages/AdminEmailDashboard";
-import Messages from "./pages/Messages";
+
+// 代碼分割 - 延遲加載非首頁路由
+const Technology = lazy(() => import("./pages/Technology"));
+const Solutions = lazy(() => import("./pages/Solutions"));
+const CFDAnalysis = lazy(() => import("./pages/CFDAnalysis"));
+const ThermalModuleDesign = lazy(() => import("./pages/ThermalModuleDesign"));
+const AluminumModuleDesign = lazy(() => import("./pages/AluminumModuleDesign"));
+const ThermalManagementSolution = lazy(() => import("./pages/ThermalManagementSolution"));
+const About = lazy(() => import("./pages/About"));
+const Contact = lazy(() => import("./pages/Contact"));
+const EmailMessaging = lazy(() => import("./pages/EmailMessaging"));
+const AdminEmailDashboard = lazy(() => import("./pages/AdminEmailDashboard"));
+const Messages = lazy(() => import("./pages/Messages"));
+
+// 加載中組件
+function PageLoader() {
+  return (
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
+    </div>
+  );
+}
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
-    <Switch>
+    <Suspense fallback={<PageLoader />}>
+      <Switch>
       <Route path={"/"} component={Home} />
       <Route path={"/technology"} component={Technology} />
       <Route path={"/solutions"} component={Solutions} />
@@ -36,7 +49,8 @@ function Router() {
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
-    </Switch>
+      </Switch>
+    </Suspense>
   );
 }
 

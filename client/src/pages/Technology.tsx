@@ -43,6 +43,7 @@ export default function Technology() {
                   className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                   decoding="async"
+                  style={{ contentVisibility: 'auto', willChange: 'transform' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
 
