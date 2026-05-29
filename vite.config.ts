@@ -58,8 +58,13 @@ export default defineConfig({
     chunkSizeWarningLimit: 500,
     assetsInlineLimit: 8192,
     cssCodeSplit: true,
-    reportCompressedSize: true,
+    reportCompressedSize: false, // 禁用壓縮大小報告以提升構建速度
     sourcemap: false,
+    // 進一步優化
+    target: 'esnext', // 使用最新的 ES 標準以減少轉譯開銷
+    modulePreload: {
+      polyfill: false, // 禁用模塊預加載 polyfill 以減少初始加載
+    },
   },
   server: {
     host: true,

@@ -25,7 +25,9 @@
 
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <!-- 使用 async 以非阻塞方式加載主應用 -->
+    <script type="module" src="/src/main.tsx" async></script>
+    <!-- 分析腳本延遲加載 -->
     <script
       defer
       src="%VITE_ANALYTICS_ENDPOINT%/umami"

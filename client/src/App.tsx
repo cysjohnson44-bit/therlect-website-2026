@@ -22,11 +22,11 @@ const EmailMessaging = lazy(() => import("./pages/EmailMessaging"));
 const AdminEmailDashboard = lazy(() => import("./pages/AdminEmailDashboard"));
 const Messages = lazy(() => import("./pages/Messages"));
 
-// 加載中組件
+// 加載中組件 - 優化以減少視覺閃動
 function PageLoader() {
   return (
-    <div className="flex items-center justify-center min-h-screen">
-      <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
+    <div className="flex items-center justify-center min-h-screen bg-background transition-opacity duration-300 ease-in">
+      <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary will-change-transform"></div>
     </div>
   );
 }

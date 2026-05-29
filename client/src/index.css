@@ -193,3 +193,61 @@
     }
   }
 }
+
+/* 性能優化 - 減少閃動和提升順暢度 */
+@layer utilities {
+  /* 圖片加載優化 - 防止 CLS (Cumulative Layout Shift) */
+  img {
+    @apply will-change-auto;
+  }
+
+  /* 動畫優化 - 使用 GPU 加速 */
+  .animate-spin,
+  .animate-pulse,
+  .animate-bounce {
+    @apply will-change-transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+
+  /* 按鈕和互動元素優化 */
+  button,
+  [role="button"],
+  a {
+    @apply transition-colors duration-200 ease-in-out;
+    transform: translateZ(0);
+  }
+
+  /* 內容區域優化 - 防止重排 */
+  .container,
+  section,
+  article,
+  main {
+    @apply will-change-auto;
+  }
+
+  /* 文字渲染優化 */
+  body,
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* 禁用不必要的動畫以提升性能 */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}

@@ -11,13 +11,15 @@ import "./index.css";
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      staleTime: 1000 * 60 * 5, // 5 分鐘
-      gcTime: 1000 * 60 * 10, // 10 分鐘
-      retry: 1,
+      staleTime: 1000 * 60 * 30, // 30 分鐘 - 延長快取時間以減少重新獲取
+      gcTime: 1000 * 60 * 60, // 60 分鐘 - 延長垃圾回收時間
+      retry: 0, // 禁用重試以加快失敗響應
       refetchOnWindowFocus: false,
+      refetchOnReconnect: false, // 禁用重新連接時的重新獲取
+      refetchOnMount: false, // 禁用掛載時的重新獲取
     },
     mutations: {
-      retry: 1,
+      retry: 0, // 禁用重試
     },
   },
 });
