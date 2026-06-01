@@ -196,25 +196,200 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Trusted Partners Section */}
-      <section className="w-full" style={{ backgroundColor: '#0f1729', padding: 0, margin: 0 }}>
-        <div className="container py-12" style={{ backgroundColor: '#0f1729' }}>
-          <h2 className="font-display font-bold text-4xl md:text-5xl mb-4 text-white text-center">值得信賴的合作夥伴</h2>
-          <p className="text-gray-300 text-lg text-center">與全球領先企業合作，提供頂級熱管理解決方案</p>
-        </div>
-        
-        <div style={{ width: '100%', backgroundColor: 'oklch(0.15 0.04 260)', padding: '40px 0', display: 'flex', justifyContent: 'center' }}>
-          <img
-            src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663272903053/XYkTAEAdpiBSyhOK.png"
-            alt="Trusted Partners Logos"
-            style={{
-              width: '80%',
-              height: 'auto',
-              display: 'block',
-              maxWidth: '100%',
-              objectFit: 'contain',
-            }}
-          />
+      {/* Comprehensive Thermal Solutions Section */}
+      <section className="py-24 relative overflow-hidden bg-gradient-to-b from-background/90 via-background to-background/95">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="font-display font-bold text-4xl md:text-5xl mb-4 text-white">全方位散熱解決方案</h2>
+            <p className="text-muted-foreground text-lg">從消費電子到工業應用，為各行業提供專業的熱管理方案</p>
+          </div>
+
+          <div className="space-y-16">
+            {/* Wearable Cooling Solution */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="order-2 lg:order-1">
+                <h3 className="font-display font-bold text-3xl mb-4 text-white">穿戴式產品散熱</h3>
+                <p className="text-muted-foreground text-base mb-6 leading-relaxed">為智慧手錶、AR/VR眼鏡和健康監測設備提供輕量化、高效能的散熱解決方案。我們的設計確保設備在長時間運行中保持最佳溫度，同時不影響產品的輕薄設計。</p>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary font-bold mt-1">•</span>
+                    <span className="text-muted-foreground">智慧手錶散熱模組 - 超薄設計，溫度控制精準</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary font-bold mt-1">•</span>
+                    <span className="text-muted-foreground">AR/VR眼鏡冷卻系統 - 長時間佩戴舒適體驗</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary font-bold mt-1">•</span>
+                    <span className="text-muted-foreground">健康監測設備 - 精密溫度控制，數據準確</span>
+                  </li>
+                </ul>
+                <Link href="/contact">
+                  <Button className="bg-primary hover:bg-primary/90 text-white rounded-sm px-8 group">
+                    了解更多
+                    <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </Link>
+              </div>
+              <div className="order-1 lg:order-2">
+                <img
+                  src="/manus-storage/wearable-cooling_46f219b9.jpg"
+                  alt="穿戴式產品散熱解決方案"
+                  className="w-full h-auto rounded-lg shadow-lg border border-primary/30"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
+
+            {/* Industrial Cooling Solution */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div>
+                <img
+                  src="/manus-storage/industrial-cooling_e89db104.webp"
+                  alt="工業用散熱解決方案"
+                  className="w-full h-auto rounded-lg shadow-lg border border-primary/30"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div>
+                <h3 className="font-display font-bold text-3xl mb-4 text-white">工業應用散熱</h3>
+                <p className="text-muted-foreground text-base mb-6 leading-relaxed">為工業製造、測試設備和精密儀器提供可靠的散熱解決方案。我們的產品經過嚴格測試，能在惡劣環境中保持穩定性能。</p>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary font-bold mt-1">•</span>
+                    <span className="text-muted-foreground">CNC機械散熱 - 高精度溫度控制</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary font-bold mt-1">•</span>
+                    <span className="text-muted-foreground">測試設備冷卻 - 24/7連續運行支持</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary font-bold mt-1">•</span>
+                    <span className="text-muted-foreground">精密儀器散熱 - 環境適應性強</span>
+                  </li>
+                </ul>
+                <Link href="/contact">
+                  <Button className="bg-primary hover:bg-primary/90 text-white rounded-sm px-8 group">
+                    了解更多
+                    <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            {/* Automotive Cooling Solution */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="order-2 lg:order-1">
+                <h3 className="font-display font-bold text-3xl mb-4 text-white">車用散熱系統</h3>
+                <p className="text-muted-foreground text-base mb-6 leading-relaxed">為電動車電池、動力系統和車載電子提供高可靠性散熱方案。我們的設計符合汽車工業標準，確保在各種駕駛條件下的最佳性能。</p>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary font-bold mt-1">•</span>
+                    <span className="text-muted-foreground">電池管理系統 - 安全可靠的溫度控制</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary font-bold mt-1">•</span>
+                    <span className="text-muted-foreground">動力電子散熱 - 高效能功率轉換</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary font-bold mt-1">•</span>
+                    <span className="text-muted-foreground">車載電子冷卻 - 極端環境適應</span>
+                  </li>
+                </ul>
+                <Link href="/contact">
+                  <Button className="bg-primary hover:bg-primary/90 text-white rounded-sm px-8 group">
+                    了解更多
+                    <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </Link>
+              </div>
+              <div className="order-1 lg:order-2">
+                <img
+                  src="/manus-storage/automotive-cooling_d99afd10.webp"
+                  alt="車用散熱解決方案"
+                  className="w-full h-auto rounded-lg shadow-lg border border-primary/30"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
+
+            {/* Server Cooling Solution */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div>
+                <img
+                  src="/manus-storage/server-cooling_74a01cac.webp"
+                  alt="服務器散熱解決方案"
+                  className="w-full h-auto rounded-lg shadow-lg border border-primary/30"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div>
+                <h3 className="font-display font-bold text-3xl mb-4 text-white">數據中心散熱</h3>
+                <p className="text-muted-foreground text-base mb-6 leading-relaxed">為伺服器、交換機和高功率電源提供企業級散熱解決方案。我們的系統設計能有效降低數據中心能耗，提高整體效率。</p>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary font-bold mt-1">•</span>
+                    <span className="text-muted-foreground">伺服器CPU散熱 - 低噪音高效能</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary font-bold mt-1">•</span>
+                    <span className="text-muted-foreground">機櫃熱管理 - 整體溫度均衡</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary font-bold mt-1">•</span>
+                    <span className="text-muted-foreground">電源模組冷卻 - 可靠性和效率並行</span>
+                  </li>
+                </ul>
+                <Link href="/contact">
+                  <Button className="bg-primary hover:bg-primary/90 text-white rounded-sm px-8 group">
+                    了解更多
+                    <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            {/* Network Communication Cooling Solution */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="order-2 lg:order-1">
+                <h3 className="font-display font-bold text-3xl mb-4 text-white">網路通訊散熱</h3>
+                <p className="text-muted-foreground text-base mb-6 leading-relaxed">為5G基地台、網路交換機和通訊設備提供專業散熱方案。我們的設計確保在高溫環境中保持穩定的網路連接。</p>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary font-bold mt-1">•</span>
+                    <span className="text-muted-foreground">5G基地台散熱 - 高功率密度冷卻</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary font-bold mt-1">•</span>
+                    <span className="text-muted-foreground">交換機散熱模組 - 可靠連接保障</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary font-bold mt-1">•</span>
+                    <span className="text-muted-foreground">通訊電源散熱 - 長期穩定運行</span>
+                  </li>
+                </ul>
+                <Link href="/contact">
+                  <Button className="bg-primary hover:bg-primary/90 text-white rounded-sm px-8 group">
+                    了解更多
+                    <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </Link>
+              </div>
+              <div className="order-1 lg:order-2">
+                <img
+                  src="/manus-storage/network-cooling_584b7519.jpg"
+                  alt="網路通訊散熱解決方案"
+                  className="w-full h-auto rounded-lg shadow-lg border border-primary/30"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

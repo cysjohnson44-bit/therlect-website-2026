@@ -78,10 +78,11 @@ export default function Solutions() {
     },
     {
       title: "穿戴式產品",
-      description: "智慧手錶、智慧眼鏡、健康監測設備等穿戴式產品需要在緊湊的空間內實現高效散熱。我們設計輕量化、高效能的散熱方案，確保穿戴式設備在長時間使用時不會過熱。通過精密的熱管理技術，我們為用戶提供舒適的穿戴體驗。",
-      detailedContent: "穿戴式產品的散熱挑戰在於空間限制與舒適度平衡。我們的解決方案包括：\n\n• 智慧手錶：超薄散熱設計，不影響穿戴舒適度\n• 智慧眼鏡：隱形散熱技術，保持產品美觀\n• 健康監測設備：精密溫控，確保傳感器準確性\n• 穿戴式電池：高能量密度配合高效散熱\n\n我們的創新技術使穿戴式產品能夠在長時間使用中保持最佳性能。",
-      items: ["智慧手錶散熱", "智慧眼鏡溫控", "健康監測設備冷卻", "穿戴式電池熱管理"],
-      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/app-wearable-products-fZHLXdpSPjxprXk8Y3Y99T.webp"
+      description: "智慧眼鏡與 AR/VR 穿戴設備代表了下一代計算平台，對散熱技術提出了前所未有的挑戰。我們專門為智慧眼鏡開發了創新的散熱解決方案，在極限的空間限制下實現高效能散熱。通過先進的導熱材料與精密的熱管理設計，確保設備在長時間佩戴中保持舒適溫度，同時不影響產品的輕薄美觀外形。",
+      detailedContent: "智慧眼鏡的散熱挑戰獨特而複雜。我們的專業解決方案包括：\n\n**AR/VR 眼鏡散熱系統：**\n• 隱形散熱設計：將散熱模組集成於眼鏡框架，保持產品美觀\n• 導熱路徑優化：利用眼鏡材料本身進行熱傳導，提高散熱效率\n• 低溫工作環境：確保眼鏡貼近皮膚時保持舒適溫度\n• 輕量化設計：散熱模組重量控制在克級，不增加佩戴負擔\n\n**核心技術特點：**\n• 精密的熱管理芯片，實時監測溫度分佈\n• 採用高導熱係數的複合材料\n• 創新的微流道散熱技術\n• 低功耗冷卻方案，不影響電池續航\n\n我們的創新技術已成功應用於多款商用 AR/VR 眼鏡，為用戶提供舒適的長時間佩戴體驗。",
+      items: ["AR/VR 眼鏡散熱", "智慧眼鏡溫控", "穿戴式設備冷卻", "導熱模組設計"],
+      images: ["/manus-storage/ar_glasses_1_9320a8b9.png", "/manus-storage/ar_glasses_2_4fb4e51f.png", "/manus-storage/ar_glasses_3_8f21963e.png"],
+      image: "/manus-storage/ar_glasses_1_9320a8b9.png"
     },
     {
       title: "工業與通訊",
@@ -225,19 +226,37 @@ export default function Solutions() {
                   </div>
                 </div>
 
-                {/* Image */}
+                {/* Image or Images Gallery */}
                 <div className="flex-1">
-                  <div className="relative overflow-hidden rounded-xl border border-white/10 shadow-2xl hover:shadow-3xl transition-all duration-500 group">
-                    <img 
-                      src={app.image} 
-                      alt={app.title}
-                      className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
-                      loading="lazy"
-                      decoding="async"
-                      style={{ contentVisibility: 'auto' }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  </div>
+                  {app.images && app.images.length > 1 ? (
+                    <div className="grid grid-cols-3 gap-4">
+                      {app.images.map((imgSrc, imgIdx) => (
+                        <div key={imgIdx} className="relative overflow-hidden rounded-xl border border-white/10 shadow-lg hover:shadow-2xl transition-all duration-500 group">
+                          <img 
+                            src={imgSrc} 
+                            alt={`${app.title} - ${imgIdx + 1}`}
+                            className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 aspect-square"
+                            loading="lazy"
+                            decoding="async"
+                            style={{ contentVisibility: 'auto' }}
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="relative overflow-hidden rounded-xl border border-white/10 shadow-2xl hover:shadow-3xl transition-all duration-500 group">
+                      <img 
+                        src={app.image} 
+                        alt={app.title}
+                        className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+                        loading="lazy"
+                        decoding="async"
+                        style={{ contentVisibility: 'auto' }}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    </div>
+                  )}
                 </div>
               </div>
             );

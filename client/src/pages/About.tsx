@@ -124,19 +124,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Clients Logo Grid */}
-      <section className="py-24 relative overflow-hidden" style={{
-        backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/clients_background_grid-aHbK8dLqMnPxYzJwKvRsT2.png)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed'
-      }}>
-        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background/80" />
-        <div className="container relative z-10">
-          <h2 className="font-display font-bold text-4xl md:text-5xl text-white text-center mb-16">我們的客戶</h2>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="py-24 text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-primary/5" />
