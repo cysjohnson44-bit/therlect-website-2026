@@ -67,12 +67,12 @@ export default function Home() {
           </div>
           
           <div className="relative hidden lg:block animate-in zoom-in-95 duration-1000 delay-300 fade-in">
-            <div className="relative w-full aspect-video max-w-[640px] mx-auto">
+            <div className="relative w-full max-w-[640px] mx-auto">
               {/* Rocket Launch Hero Image */}
               <img 
                 src="/manus-storage/rocket_launch_hero_f51d3cd5.png" 
                 alt="Rocket Launch - Thermal Energy" 
-                className="relative z-10 w-full h-full object-cover drop-shadow-[0_0_50px_rgba(255,100,0,0.3)] rounded-2xl border border-primary/30"
+                className="relative z-10 w-full h-auto object-contain drop-shadow-[0_0_50px_rgba(255,100,0,0.3)] rounded-2xl border border-primary/30"
                 loading="lazy"
                 decoding="async"
                 style={{ contentVisibility: 'auto', willChange: 'opacity' }}
