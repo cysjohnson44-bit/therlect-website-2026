@@ -67,13 +67,12 @@ export default function Home() {
           </div>
           
           <div className="relative hidden lg:block animate-in zoom-in-95 duration-1000 delay-300 fade-in">
-            <div className="relative w-full aspect-square max-w-[480px] mx-auto">
-              {/* Abstract 3D Element or Product Visualization */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/20 to-purple-500/20 rounded-full blur-[100px] animate-pulse-slow" />
+            <div className="relative w-full aspect-video max-w-[640px] mx-auto">
+              {/* Rocket Launch Hero Image */}
               <img 
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/hero_thermal_visualization-VjJ7un5PSb8V4XxQde6YRz.webp" 
-                alt="Thermal Analysis Visualization" 
-                className="relative z-10 w-full h-full object-contain drop-shadow-[0_0_50px_rgba(0,240,255,0.3)] rounded-2xl border border-white/10"
+                src="/manus-storage/rocket_launch_hero_f51d3cd5.png" 
+                alt="Rocket Launch - Thermal Energy" 
+                className="relative z-10 w-full h-full object-cover drop-shadow-[0_0_50px_rgba(255,100,0,0.3)] rounded-2xl border border-primary/30"
                 loading="lazy"
                 decoding="async"
                 style={{ contentVisibility: 'auto', willChange: 'opacity' }}
