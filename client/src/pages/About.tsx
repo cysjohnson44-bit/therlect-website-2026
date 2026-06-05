@@ -110,6 +110,48 @@ export default function About() {
 
 
 
+      {/* Conflict-Free Minerals Policy */}
+      <section className="py-24 bg-card/30 border-y border-white/5">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-display font-bold text-3xl md:text-4xl mb-8">無衝突礦產政策</h2>
+            <p className="text-muted-foreground mb-6 leading-relaxed">
+              汎海科技股份有限公司致力於支持負責任的採購實踐，並承諾不購入、不使用衝突金屬。
+            </p>
+            
+            <div className="space-y-6 text-muted-foreground">
+              <div>
+                <h3 className="font-semibold text-foreground mb-3">背景與承諾</h3>
+                <p className="leading-relaxed">
+                  非洲剛果民主共和國(DRC)及其周圍國家之武裝叛亂組織，透過金屬開採、貿易導致許多社會和環境問題，包括侵害人權及引發武裝暴力等。此類金屬礦產包括：鉭[Tantalum (Ta)]、錫[Tin (Sn)]、鎢[Tungsten (W)]、鈷[Cobalt (Co)]和金[Gold (Au)]。來自DRC及其鄰近衝突地區之上述金屬，被稱為衝突礦產(Conflict Minerals)。
+                </p>
+                <p className="leading-relaxed mt-3">
+                  為了捍衛人權和減緩剛果民主共和國及其鄰近國家之武裝衝突，我們汎海科技支持電子產業公民聯盟 (EICC, Electronic Industry Citizenship Coalition)及全球永續議題e化倡議組織(GeSi, the Global e-Sustainability Initiative)所創立之無衝突採購倡議 (CFSI, Conflict-Free Sourcing Initiative)。
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-foreground mb-3">我們的承諾</h3>
+                <ul className="space-y-3">
+                  <li className="flex gap-3">
+                    <span className="text-primary font-bold min-w-fit">✓</span>
+                    <span>不購買來自剛果民主共和國及其周圍國家之衝突地區所生產之衝突金屬。</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-primary font-bold min-w-fit">✓</span>
+                    <span>要求我們的供應商不使用來自衝突地區之衝突金屬。若來自衝突地區，必須產自第三方驗證通過之無衝突礦場。若用於本公司之產品中非故意使用到衝突礦產，必須第一時間通知我方，以採取必要之措施。</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-primary font-bold min-w-fit">✓</span>
+                    <span>本公司同時盡職調查我們的供應商金屬來源。採用CFSI之衝突金屬調查範本 (CMRT, Conflict Minerals Reporting Template)做為調查表，要求供應商披露礦產來源，及簽署無衝突礦產承諾書，期望我們的供應商共同遵守無衝突礦產的政策。透過負責任之採購管理，確保我們及供應商之採購來源非來自衝突地區並符合客戶及法規要求。</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-24 text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-primary/5" />
