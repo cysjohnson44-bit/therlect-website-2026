@@ -110,6 +110,22 @@ export default function About() {
 
 
 
+      {/* CTA */}
+      <section className="py-24 text-center relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-primary/5" />
+        <div className="container relative z-10 max-w-3xl">
+          <h2 className="font-display font-bold text-3xl md:text-4xl mb-6">加入我們的行列</h2>
+          <p className="text-muted-foreground text-lg mb-8">
+            我們始終在尋找對熱力學充滿熱情的人才。如果您也想推動技術進步，歡迎加入 Therlect。
+          </p>
+          <Link href="/contact">
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-sm px-8">
+              聯絡我們 <ArrowRight className="ml-2 w-4 h-4" />
+            </Button>
+          </Link>
+        </div>
+      </section>
+
       {/* Conflict-Free Minerals Policy */}
       <section className="py-24 bg-card/30 border-y border-white/5">
         <div className="container">
@@ -149,22 +165,6 @@ export default function About() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-24 text-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-primary/5" />
-        <div className="container relative z-10 max-w-3xl">
-          <h2 className="font-display font-bold text-3xl md:text-4xl mb-6">加入我們的行列</h2>
-          <p className="text-muted-foreground text-lg mb-8">
-            我們始終在尋找對熱力學充滿熱情的人才。如果您也想推動技術進步，歡迎加入 Therlect。
-          </p>
-          <Link href="/contact">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-sm px-8">
-              聯絡我們 <ArrowRight className="ml-2 w-4 h-4" />
-            </Button>
-          </Link>
         </div>
       </section>
 
