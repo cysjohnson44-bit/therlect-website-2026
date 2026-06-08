@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: therlect-website
+    runtime: node
+    plan: standard
+    region: singapore
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+    healthCheckPath: /
+    autoDeploy: true
+
+databases:
+  - name: therlect-db
+    databaseName: therlect
+    user: therlect_user
+    plan: starter
+    region: singapore
