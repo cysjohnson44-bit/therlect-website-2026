@@ -250,7 +250,7 @@ export default function Home() {
               </div>
               <div className="order-1 lg:order-2">
                 <img
-                  src="/manus-storage/wearable-cooling_46f219b9.jpg"
+                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/wearable-cooling.png"
                   alt="穿戴式產品散熱解決方案"
                   className="w-full h-auto rounded-lg shadow-lg border border-primary/30"
                   loading="lazy"
