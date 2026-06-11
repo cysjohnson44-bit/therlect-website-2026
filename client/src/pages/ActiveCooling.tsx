@@ -57,7 +57,7 @@ export default function ActiveCooling() {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg mb-2">風冷系統</h3>
-                    <p className="text-muted-foreground">利用風扇強制對流，將熱量帶走。成本低，應用廣泛。</p>
+                    <p className="text-muted-foreground">利用風扇強制對流，將熱量帶走。成本低，應用廣汎。</p>
                   </div>
                 </div>
                 <div className="flex gap-4">

@@ -207,7 +207,7 @@ export default function ThermalManagementSolution() {
               </span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              我們的解決方案已被廣泛應用於各個行業，為全球客戶提供卓越的熱管理服務
+              我們的解決方案已被廣汎應用於各個行業，為全球客戶提供卓越的熱管理服務
             </p>
           </div>
 
