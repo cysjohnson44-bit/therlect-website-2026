@@ -10,9 +10,7 @@
     "check": "tsc --noEmit",
     "format": "prettier --write .",
     "test": "vitest run",
-    "db:push": "drizzle-kit generate && drizzle-kit migrate",
-    "deploy:surge": "surge dist/public --domain therlect.com && surge dist/public --domain www.therlect.com && surge dist/public --domain therlect.surge.sh",
-    "deploy": "pnpm run build && pnpm run deploy:surge"
+    "db:push": "drizzle-kit generate && drizzle-kit migrate"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.693.0",
