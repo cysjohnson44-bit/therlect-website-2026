@@ -1,17 +1,9 @@
 {
   "version": 2,
-  "buildCommand": "pnpm install && pnpm run build:client",
-  "installCommand": "pnpm install",
-  "framework": null,
+  "framework": "vite",
+  "buildCommand": "pnpm run build:client",
   "outputDirectory": "dist/public",
-  "functions": {
-    "api/index.ts": {
-      "maxDuration": 30
-    }
-  },
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api" },
-    { "source": "/manus-storage/(.*)", "destination": "/api" },
-    { "source": "/((?!assets/).*)", "destination": "/index.html" }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
