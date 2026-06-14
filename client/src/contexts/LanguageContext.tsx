@@ -24,7 +24,7 @@ const translations: Record<Language, Record<string, string>> = {
     'thermal_management_experts': 'THERMAL MANAGEMENT EXPERTS',
     'release_thermal_energy': '釋放熱能的',
     'unlimited_potential': '無限潛力',
-    'company_description': 'Therlect 汎海科技，憑藉超過20年的熱管理專業經驗，致力於為全球客戶提供從理論分析到市場應用的全方位解決方案。',
+    'company_description': 'Therlect 汎海科技，憑藉超過20年的熱管理專業經驗，致力於為全球客戶提供從理論分析到市場應用。',
     'explore_solutions': '探索解決方案',
     'contact_us': '聯絡我們',
     'temperature_control': '溫度控制',
