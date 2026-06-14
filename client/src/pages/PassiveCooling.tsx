@@ -32,7 +32,7 @@ export default function PassiveCooling() {
           {/* Hero Image */}
           <div className="mb-20 rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
             <img 
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/passive-cooling-hero-image.webp" 
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/tech-passive-cooling-hero-BZu5BzPbdFDcmfNxq47WV3.webp" 
               alt="被動散熱技術可視化" 
               className="w-full h-auto object-cover"
               loading="lazy"

@@ -38,7 +38,7 @@ export default function Technology() {
               <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
               <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
                 <img 
-                  src="/assets/thermal_analysis.jpg" 
+                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/tech-thermal-engineering-mrmE4sVziXUyjxJidFQgjv.webp" 
                   alt="Thermodynamic Engineering" 
                   className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
@@ -94,7 +94,17 @@ export default function Technology() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Passive Cooling */}
-            <div className="bg-card/30 border border-white/5 p-8 rounded-xl hover:bg-card/50 transition-colors">
+            <div className="bg-card/30 border border-white/5 rounded-xl hover:bg-card/50 transition-colors overflow-hidden">
+              <div className="w-full h-48 overflow-hidden">
+                <img 
+                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/tech-passive-cooling-card-2WbHVSLDoDUeMpUaS2WS5a.webp" 
+                  alt="被動散熱技術" 
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div className="p-8">
               <Link href="/technology/passive-cooling">
                 <button
                   onClick={() => setPassiveExpanded(!passiveExpanded)}
@@ -122,10 +132,21 @@ export default function Technology() {
                   </div>
                 </div>
               )}
+              </div>
             </div>
 
             {/* Active Cooling */}
-            <div className="bg-card/30 border border-white/5 p-8 rounded-xl hover:bg-card/50 transition-colors">
+            <div className="bg-card/30 border border-white/5 rounded-xl hover:bg-card/50 transition-colors overflow-hidden">
+              <div className="w-full h-48 overflow-hidden">
+                <img 
+                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663272903053/6a2H4uYcRvYtNrWj4wnxzN/tech-active-cooling-card-AsQfiqkbe9WvYDqbRbLfEZ.webp" 
+                  alt="主動冷卻技術" 
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div className="p-8">
               <Link href="/technology/active-cooling">
                 <button
                   onClick={() => setActiveExpanded(!activeExpanded)}
@@ -153,6 +174,7 @@ export default function Technology() {
                   </div>
                 </div>
               )}
+              </div>
             </div>
           </div>
         </div>
