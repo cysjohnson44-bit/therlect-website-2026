@@ -252,6 +252,44 @@ export default function Home() {
               </div>
             </div>
 
+            {/* Robot Thermal Management Solution */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div>
+                <img
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663272903053/GBUNjgOAzvnhvaSz.webp"
+                  alt={isEn ? 'Robot thermal management - Industrial robotic arm with cooling system' : '機器人散熱解決方案 - 工業機械手臂散熱系統'}
+                  className="w-full h-auto rounded-lg shadow-lg border border-primary/30"
+                  loading="lazy"
+                  decoding="async"
+                  style={{ contentVisibility: 'auto' }}
+                />
+              </div>
+              <div>
+                <h3 className="font-display font-bold text-3xl mb-4 text-white">{isEn ? 'Robot Thermal Management' : '機器人散熱解決方案'}</h3>
+                <p className="text-muted-foreground text-base mb-6 leading-relaxed">{isEn ? 'Robots under high-load operation face heat accumulation in motors, drivers, and control boards as the greatest threat to reliability. Therlect provides customized thermal designs for industrial robotic arms and service robots, ensuring long-duration continuous operation without performance degradation.' : '機器人在高負載運作下，馬達、驅動器、控制板的熱累積是可靠度的最大威脅。汎海科技提供工業機械手臂與服務型機器人的客製化散熱設計，確保長時間連續運作不降效。'}</p>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary font-bold mt-1">•</span>
+                    <span className="text-muted-foreground">{isEn ? 'Joint Motors - Long-duration high-torque heat generation' : '關節馬達 - 長時間高扭矩發熱'}</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary font-bold mt-1">•</span>
+                    <span className="text-muted-foreground">{isEn ? 'Servo Drivers - High power density, compact space' : '伺服驅動器 - 功率密度高、空間小'}</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary font-bold mt-1">•</span>
+                    <span className="text-muted-foreground">{isEn ? 'Main Control Board / AI Chips - Dense computation, high peak thermal throughput' : '主控板 / AI 晶片 - 運算密集、峰值熱通量高'}</span>
+                  </li>
+                </ul>
+                <Link href="/solutions">
+                  <Button className="bg-primary hover:bg-primary/90 text-white rounded-sm px-8 group">
+                    {isEn ? 'Learn More' : '了解更多'}
+                    <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
             {/* Industrial Cooling Solution */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
