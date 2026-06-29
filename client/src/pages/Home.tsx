@@ -408,21 +408,16 @@ export default function Home() {
 
       {/* Trusted Partners Section */}
       <section className="relative overflow-hidden bg-background">
-        <div className="container py-12 mb-0">
-          <h2 className="font-display font-bold text-4xl md:text-5xl mb-4 text-white text-center">{isEn ? 'Trusted Partners' : '值得信賴的合作夥伴'}</h2>
-          <p className="text-gray-300 text-lg text-center">{isEn ? 'Partnering with global leading enterprises to provide top-tier thermal management solutions' : '與全球領先企業合作，提供頂級熱管理解決方案'}</p>
-        </div>
-        
-        {/* Full-width partner logos background with hover zoom effect */}
+        {/* Full-width partner logos background */}
         <div className="w-full overflow-hidden bg-background" style={{ minHeight: '450px', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '40px 20px' }}>
           <img
-            src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663272903053/thcPWNEeCXyHHZJg.jpg"
-            alt="Trusted Partners Logos"
+            src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663272903053/VMkNfdgmSifoBxAf.png"
+            alt={isEn ? 'Partner Logos' : '合作夥伴'}
             className="transition-transform duration-500 ease-out hover:scale-105"
             style={{
               imageRendering: 'crisp-edges',
               display: 'block',
-              width: '56%',
+              width: '80%',
               height: 'auto',
               maxWidth: '100%',
               objectFit: 'contain',
