@@ -408,6 +408,9 @@ export default function Home() {
 
       {/* Trusted Partners Section */}
       <section className="relative overflow-hidden bg-background">
+        <div className="container pt-12 pb-4">
+          <p className="text-gray-300 text-lg text-center">{isEn ? 'Partnering with global leading enterprises to provide top-tier thermal management solutions' : '與全球領先企業合作，提供頂級熱管理解決方案'}</p>
+        </div>
         {/* Full-width partner logos background */}
         <div className="w-full overflow-hidden bg-background" style={{ minHeight: '450px', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '40px 20px' }}>
           <img
